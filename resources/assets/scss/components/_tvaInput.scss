@@ -1,0 +1,127 @@
+//Basic Input Field Settings
+input {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    width: auto;
+    overflow: visible;
+    -webkit-appearance: button;
+}
+
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input:focus,
+select:focus {
+    vertical-align: middle;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    vertical-align: text-top;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+label[for],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="file"],
+button {
+    cursor: pointer;
+}
+
+input:-internal-autofill-selected {
+    background-color: var(--background-color) !important;
+}
+
+form {
+    width: 100%;
+}
+
+input.form-sub {
+    --background: var(--background-color);
+    --border-color: var(--foreground-color);
+    --padding: 5px 10px;
+    --font-size: 16px;
+    --border-radius: none;
+    outline: none;
+    display: block;
+    font-size: var(--font-size);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    border-left: none;
+    border-right: none;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+    transition: border 0.3s ease, color 0.3s ease, background 0.3s ease;
+    width: 100%;
+}
+
+input.input-xl {
+    padding: 10px 16px;
+    height: 45px;
+}
+
+.form-group {
+    .control-group:nth-child(n) {
+        border-top: var(--border);
+        border-bottom: var(--border);
+    }
+    .control-group:nth-child(3n) {
+        border-top: none;
+        border-bottom: var(--border);
+    }
+}
+
+.form-field:focus {
+    outline: none;
+}
+.form-field:hover,
+.form-field:focus,
+.form-field:active {
+    background: var(--input-background);
+}
+
+.form-sub:hover,
+.form-sub:focus,
+.form-sub:active {
+    background: var(--input-background);
+}
+
+/* Change Autocomplete styles*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: var(--foreground-color);
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}

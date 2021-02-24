@@ -1,0 +1,45 @@
+
+.edit-form {
+    .control-group {
+        border-top: var(--border);
+        position: relative;
+        label {
+            font-size: 14px;
+            border: var;
+            border-bottom: var(--border);
+            width: 100%;
+            display: flex;
+            padding-left: 5px;
+        }
+        input {
+            height: 49px;
+        }
+    }
+}
+
+.empty {
+    padding: 14px
+}
+.account-action {
+    padding: 14px
+}
+
+.account-table-content{
+
+    .control-group {
+        border-top: var(--border);
+        position: relative;
+        label {
+            font-size: 14px;
+            border: var;
+            border-bottom: var(--border);
+            width: 100%;
+            display: flex;
+            padding-left: 5px;
+        }
+        input {
+            height: 49px;
+        }
+    }
+
+}

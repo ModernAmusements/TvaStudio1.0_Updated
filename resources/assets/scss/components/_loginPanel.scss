@@ -1,0 +1,288 @@
+//Login Styles
+.twa-login-panel {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    color: var(--foreground-color);
+    background: var(--tva-primary);
+    border-bottom: var(--border);
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 46px);
+    top: 46px;
+    left: 0;
+    overflow: scroll;
+}
+
+.nav-menu {
+    li {
+        a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 2em;
+            transform: translateY(-5px);
+            opacity: 0;
+            transition-property: transform, opacity;
+            transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition-duration: 0.25s;
+            transition-delay: 0.3s;
+        }
+    }
+}
+
+.login-heading-registered,
+.login-heading-sign-up {
+    transform: translateY(-5px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-duration: 0.25s;
+    transition-delay: 0.3s;
+}
+
+.twa-login-panel.is-open {
+    pointer-events: all;
+    opacity: 1;
+
+    grid-column: 1 / 9;
+    grid-row: 1;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 65px auto;
+
+    .login-panel-heading {
+        display: grid;
+        grid-column: 1 / 3;
+        grid-row: 1;
+        place-items: center;
+        border-bottom: var(--border);
+        text-align: center;
+        .menu-heading {
+            width: 100%;
+            display: flex;
+            font-size: 3em;
+            place-content: center;
+        }
+    }
+    .login-content {
+        padding: 1em;
+        height: 188px;
+        .paragraph,
+        ul {
+            text-align: left;
+        }
+    }
+    .nav-menu {
+        // display: grid;
+        grid-column: 1 / 2;
+        grid-row: 2;
+        border-right: var(--border);
+        li {
+            border-bottom: var(--border);
+            a {
+                transform: none;
+                opacity: 0.5;
+            }
+        }
+        li.active {
+            a {
+                opacity: 1;
+            }
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        li:nth-child(1) a {
+            transition-delay: 0.16s;
+        }
+
+        li:nth-child(2) a {
+            transition-delay: 0.22s;
+        }
+
+        li:nth-child(3) a {
+            transition-delay: 0.28s;
+        }
+
+        li:nth-child(4) a {
+            transition-delay: 0.34s;
+        }
+
+        li:nth-child(5) a {
+            transition-delay: 0.4s;
+        }
+        li:nth-child(6) a {
+            transition-delay: 0.46s;
+        }
+        li:nth-child(7) a {
+            transition-delay: 0.54s;
+        }
+        li:nth-child(8) a {
+            transition-delay: 0.56s;
+        }
+    }
+    .nav-menu-profile {
+        grid-column: 1 / 3;
+        border-right: none;
+    }
+    .register-area  {
+        display: grid;
+        grid-column: 2 / 3;
+        grid-template-columns: 1fr 1fr;
+    }
+    .login-heading-registered,
+    .login-heading-sign-up {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transform: none;
+        opacity: 1;
+    }
+    span.text {
+        // color: var(--background-color);
+    }
+}
+
+.login-heading-sign-up {
+    .login-heading {
+        border-left: var(--border);
+    }
+    .login-content {
+        border-left: var(--border);
+    }
+}
+
+.login-area {
+    grid-column: 1 / 3;
+}
+
+.login-heading {
+    white-space: nowrap;
+    text-align: start;
+    border-bottom: var(--border);
+    font-size: 2em;
+    padding: 10px 20px;
+}
+
+.user-menu {
+    .usermenu-item {
+        span {
+            text-transform: uppercase;
+        }
+        button:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.dropdown-list.is-open {
+    display: block;
+}
+
+.accordian.active > .accordian-content {
+    display: inline-block;
+}
+
+.login-panel-content {
+    width: 100%;
+    display: grid;
+    .btn-grid {
+        border-top: var(--border);
+        display: grid;
+    }
+    span {
+        place-items: center;
+        min-height: 30px;
+        display: grid;
+    }
+}
+
+@media (max-width: 960px) {
+    .twa-login-panel {
+        border-right: none;
+    }
+    .twa-login-panel.is-open {
+        width: 100%;
+        z-index: 2;
+        flex-direction: column;
+        .login-panel-heading {
+            text-align: left;
+            h1 {
+                margin: 0;
+            }
+            .menu-heading {
+                place-content: flex-start;
+                margin-left: 30px;
+            }
+        }
+        .login-heading-registered {
+            grid-row: 2;
+        }
+
+        .login-heading-sign-up {
+            grid-row: 3;
+        }
+        ul.paragraph {
+            display: none;
+        }
+        p.paragraph {
+            margin: 0;
+        }
+        .login-heading {
+            text-align: start;
+            white-space: normal;
+        }
+        .login-content {
+            height: auto;
+        }
+        .login-heading-registered,
+        .login-heading-sign-up {
+            width: 100%;
+        }
+        .login-heading-sign-up {
+            margin-top: 20px;
+        }
+        .login-panel-heading,
+        .nav-menu,
+        .register-area {
+            grid-column: 1 / 3;
+        }
+        .register-area  {
+            border-top: var(--border);
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .nav-menu {
+            display: inline-table;
+            border-right: none;
+            border-bottom: var(--border);
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .twa-login-panel.is-open {
+        .login-panel-heading {
+            .menu-heading {
+            }
+        }
+        ul.paragraph {
+        }
+        p.paragraph {
+        }
+        .login-heading {
+        }
+        .login-content {
+        }
+        .login-heading-registered,
+        .login-heading-sign-up {
+        }
+        .login-heading-sign-up {
+        }
+        .register-area  {
+        }
+        .nav-menu {
+        }
+    }
+}

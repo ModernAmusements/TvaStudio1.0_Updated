@@ -1,0 +1,136 @@
+:root {
+    --gutter: 1.5rem;
+    --bg-color: #edf2f7; // bg-gray-200
+    --speed: 0.3s;
+ }
+
+ .project-list { // inspired by https://uxdesign.cc/creating-horizontal-scrolling-containers-the-right-way-css-grid-c256f64fc585
+    display: grid;
+    // grid-gap: calc(var(--gutter) * 1.5 + 1vw);
+    grid-template-columns: 1rem;
+    grid-template-rows: minmax(10rem, 1fr);
+    grid-auto-flow: column;
+    border-top: var(--border);
+    grid-auto-columns: 300px; // small viewports
+    padding-left: 1em;
+    @media (min-width: 1240px) {
+        grid-auto-columns: calc(var(--gutter) * 20);
+    }
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    scroll-snap-points-x: repeat(100%);
+    scroll-snap-type: mandatory;
+    scroll-snap-destination: 100% 0%;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+       display: none;
+    }
+    @media (min-width: 800px) { // yeah make this large-viewport only
+       &:hover {
+          .item {
+             opacity: 0.6;
+             filter: blur(2px);
+             // transition-delay: 0.3s;
+          }
+       }
+    }
+ }
+ .flag {
+    transition: all var(--speed) ease;
+    transform: translate3d(6rem, -6rem, 0) rotate(45deg);
+ }
+ .project-list:before,
+ .project-list:after {
+    content: '';
+    width: 0;
+ }
+ .item {
+    scroll-snap-align: center;
+    padding: calc(var(--gutter) / 2 * 1.5);
+    transition: all var(--speed);
+    &:hover {
+       opacity: 1 !important;
+       filter: blur(0) !important;
+       .flag {
+          transform: translate3d(4rem, -4rem, 0) rotate(45deg); // greater the offset value here, smaller the 'tag' is
+       }
+    }
+ }
+ .item:nth-last-child {
+    margin-right: 5rem;
+ }
+ .lozad {
+    transition: opacity var(--speed);
+    opacity: 0;
+ }
+ .lozad.loaded {
+    opacity: 1;
+ }
+ .toggled {
+    transition: opacity var(--speed);
+    transition-delay: var(--speed);
+    opacity: 1;
+ }
+ .no-scrollbar {
+    scrollbar-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+ }
+ .no-scrollbar::-webkit-scrollbar {
+    display: none;
+ }
+
+
+ .is-active { // when toggle is triggered, the target gets .is-active
+    display: block;
+ }
+ $speed-default: 150ms;
+ .icon, .toggle-me, .nav-item {
+    transition: all var(--speed) ease; // for production: just apply to [color | position | opacity]
+ }
+ .is-toggled {
+    // border-color: gold;
+    color: black;
+    .icon-default {
+       display: none;
+       // opacity: 0;
+    }
+    .icon-active {
+       display: block;
+       // opacity: 1;
+    }
+ }
+
+ // == working on some transitions for menu elements.
+
+ // a.nav-item {
+ //    transition: opacity 0.2s, transform 0.2s ease;
+ //    transform: translate3D(0, 3px, 0);
+ //    opacity: 0;
+ // }
+ .nav-items {
+    @for $i from 1 through 6 {
+       // add a small bit of delay for n children. Estimating 8
+       $t: 0.05s * $i + 0.2s;
+       &:nth-child(#{$i}) a {
+          transition-delay: $t;
+       }
+    }
+ }
+ .toggle-target.is-active .nav-items a.nav-item {
+    transform: translate3D(0, 0, 0);
+    opacity: 1;
+ }
+
+ %prefade {
+     transition: opacity 0.2s, transform 0.2s ease;
+     transform: translate3D(-4px, 0, 0);
+     transition-delay: 0.8s;
+     opacity: 0;
+ }
+ .fade-1 { // might need a coherent timing function, so delays are coordinated
+     @extend %prefade;
+     transition-delay: 0.8s;
+ }

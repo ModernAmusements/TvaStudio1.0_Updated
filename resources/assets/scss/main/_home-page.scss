@@ -1,0 +1,15 @@
+
+
+
+@media (max-width: 960px) {
+
+    .main-container-wrapper .product-grid-3,
+    .main-container-wrapper .product-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
+
+    }
+
+
+
+}

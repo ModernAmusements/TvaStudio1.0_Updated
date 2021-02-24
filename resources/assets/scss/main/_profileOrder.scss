@@ -1,0 +1,154 @@
+
+.account-items-list {
+    display: block;
+    width: 100%;
+}
+
+.grid-container {
+    display: block;
+    width: 100%;
+    .filter-row-two {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        display: inline-flex;
+        .filter-tag {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14px;
+            height: 28px;
+            border-radius: 2px;
+            margin-right: 10px;
+            .wrapper {
+                margin-left: 10px;
+                padding: 5px 10px;
+                background: var(--tva-primary);
+                letter-spacing: -0.22px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 14px;
+                height: 28px;
+                border-radius: 2px;
+                border: var(--border);
+                .icon.cross-icon {
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    table {
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+        thead {
+            display: table-header-group;
+            .grid_head {
+                padding: 13px
+            }
+        }
+    }
+}
+
+.dropdown-filters {
+    .control-group {
+        border-top: var(--border);
+        position: relative;
+            label {
+                font-size: 14px;
+                border: var;
+                border-bottom: var(--border);
+                width: 100%;
+                display: flex;
+                padding-left: 5px;
+            }
+            input {
+                height: 49px;
+            }
+    }
+    .grid-dropdown-header{
+        display: flex;
+        justify-content: space-between;
+        height: 49px;
+        align-items: center;
+        padding: 14px;
+    }
+    .filter-column-select,
+    .control {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        font-size: 1em;
+        height: 49px;
+        line-height: 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        appearance: none;
+        background-color: var(--background-color);
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOS4wOSAxTDQuNTQ1IDQuNTkgMCAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iLjgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz48L3N2Zz4=");
+        background-repeat: no-repeat;
+        background-position: calc(100% - .625rem) 50%;
+        background-size: 11px 5px;
+        border: 1px solid var(--background-color);
+        box-shadow: none;
+        border-radius: 0;
+        border-left: var(--border);
+        border-right: none;
+    }
+    .apply-filter {
+        min-height: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        place-items: center;
+        white-space: nowrap;
+        cursor: pointer;
+        display: grid;
+        font-size: 14px;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 770px) {
+
+    .grid-container {
+        table {
+            thead {
+                display: none;
+            }
+        }
+}
+    .table {
+        table {
+            width: 100%;
+            tbody tr td:before {
+                content: attr(data-value);
+                font-size: 15px;
+                font-weight: 600;
+                display: inline-block;
+                width: 120px;
+            }
+            tbody td {
+                border-bottom: none !important;
+                display: block;
+                width: 100% !important;
+                div {
+                    position: relative;
+                    left: 100px;
+                    top: -20px;
+                }
+
+            }
+            tbody tr:last-child {
+                 border-bottom: var(--border);
+            }
+        }
+    }
+
+}

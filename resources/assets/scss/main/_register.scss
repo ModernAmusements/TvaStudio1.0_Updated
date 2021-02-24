@@ -1,0 +1,48 @@
+.auth-content {
+    margin-top: 10em;
+    margin-bottom: 2em;
+    padding: 2em;
+    .login-text {
+        padding: 1em;
+    }
+    .sign-up-text {
+        margin-bottom: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+        text-align: center;
+    }
+    .login-form {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        border: var(--border);
+        flex-direction: column;
+        max-width: 500px;
+    }
+    .signup-confirm {
+        border-bottom: var(--border);
+    }
+    .confirm-group{
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        background: var(--tva-secondary);
+
+    }
+}
+
+.forgot-password-link {
+    padding: 10px 16px;
+}
+
+
+@media (max-width: 400px) {
+    .auth-content {
+        margin-top: 5em;
+        margin-bottom: 2em;
+        padding: 2em;
+        }
+    }
+
+

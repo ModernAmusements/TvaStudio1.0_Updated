@@ -1,0 +1,157 @@
+.account-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 100px);
+    margin-top: 22px;
+    margin-bottom: 100px;
+    padding: 0 2em;
+    .account-layout {
+        width: 80%;
+        border-top: var(--border);
+        border-right: var(--border);
+        table {
+            width: 100%;
+            border-spacing: 0;
+            tbody tr {
+                height: 50px;
+            }
+            tbody tr td {
+                border-top: var(--border);
+                padding-left: 14px;
+            }
+        }
+    }
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        width: 20%;
+        height: 100%;
+        border-right: var(--border);
+        border-left: var(--border);
+    }
+    .menu-block {
+        margin-bottom: 30px;
+        .menubar {
+            position: relative;
+            li {
+                /* width: 95%; */
+                height: 50px;
+                /* margin-left: 5%; */
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                border-bottom: var(--border);
+                a {
+                    width: 100%;
+                    text-align: left;
+                    padding: 14px;
+                }
+                .icon {
+                    display: none;
+                    position: absolute;
+                    right: 12px;
+                }
+            }
+            li:first-child {
+                border-top: none;
+            }
+            li:last-child {
+                border-bottom: none;
+            }
+            li.active a {
+                color: var(--tva-primary-hover);
+            }
+            li.active .icon {
+                display: inline-block;
+            }
+        }
+    }
+    menu-block:last-child {
+        margin-bottom: 0;
+    }
+    .menu-block-title .right {
+        display: none;
+    }
+}
+
+.menu-block-title {
+    border-top: var(--border);
+    padding: 14px;
+}
+.heading {
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+        font-weight: bold;
+    }
+}
+.menu-block-content {
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+.modal-body {
+}
+
+@media only screen and (max-width: 770px) {
+    .account-content {
+        flex-direction: column;
+        height: 100%;
+        .account-layout {
+            margin-left: 0;
+            width: 100%;
+            border-left: var(--border);
+            .account {
+                display: flex;
+                justify-content: space-between;
+                height: 50px;
+            }
+        }
+        .sidebar {
+            width: 100%;
+            .right {
+                display: block;
+                float: right;
+                align-self: center;
+            }
+            .menubar > li {
+                margin-left: 0;
+                width: 100%;
+            }
+            .menubar > li:last-child {
+                border-bottom: 1px solid #c7c7c7;
+            }
+        }
+    }
+    .account-table-content {
+        font-size: 14px;
+    }
+}
+.account-content
+    .account-layout
+    .account-content
+    .account-layout
+    .account
+    .account-action {
+    margin-top: 12px;
+    margin-left: 15px;
+}
+.account-content .account-layout .account .back-icon {
+    display: block;
+}
+.account-content .account-layout .account span {
+    margin-top: 13px;
+    font-size: 18px;
+}
+
+.account-content .control-group .control {
+    width: 100%;
+}
+
+
+

@@ -1,0 +1,22 @@
+.sticker {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-transform: uppercase;
+    padding: 1em;
+    padding-top: 38px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--foreground-color);
+    font-weight: 600;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.sticker.sale {
+    background: #ff6472;
+}
+.sticker.new {
+    background: var(--primary-color);
+}

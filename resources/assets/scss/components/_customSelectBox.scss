@@ -1,0 +1,20 @@
+.c-form {
+    display: block;
+    width: 100%;
+    padding: .5rem .625rem;
+    font-size: 1em;
+    height: 49px;
+    line-height: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    appearance: none;
+    background-color: var(--background-color);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOS4wOSAxTDQuNTQ1IDQuNTkgMCAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iLjgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz48L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: calc(100% - .625rem) 50%;
+    background-size: 11px 5px;
+    border: 1px solid var(--background-color);
+    box-shadow: none;
+    border-radius: 0
+}

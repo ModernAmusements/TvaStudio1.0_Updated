@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@import "base/variables", "base/reset", "base/main", "base/tvaTypography";
+
+@import "main/header", "main/product", "main/footer", "main/body", "main/about-page",
+    "main/register", "main/home-page",  "main/profile", "main/profileEdit", "main/profileOrder", "main/catPages";
+
+@import "components/tvaInput", "components/horizontalScroll",
+    "components/tvaBtn", "components/tvaClose", "components/icons", "components/shopArticle",
+    "components/cart", "components/productSticker", "components/loginPanel",
+    "components/notificatons", "components/searchPanel", "components/categories",
+    "components/productHero", "components/newsletterPanel", "components/cartIndex",
+    "components/filterContainer", "components/custom-checkbox" ,"components/customSelectBox" ,"components/addressHolder"
+    ,"components/badge";

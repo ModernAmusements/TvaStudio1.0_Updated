@@ -1,0 +1,58 @@
+:root {
+    --fontSize: 14px;
+    --tva-primary: #ddd7ca;
+    --tva-primary-hover: #d5d514;
+    --tva-primary-active: #d0d00f;
+    --tva-secondary: #ebe8e2;
+    --tva-secondary-background: #1b2c13;
+    --list-hover: #a7a5a1;
+    --background-color: #FDFBF4;
+    --foreground-color: rgba(0, 0, 0);
+    --border: 1px solid #000;
+    --border-light: 1px solid #ebe8e2;
+    --lineHeight: calc(var(--fontSize) * 1.5);
+    --displayScale: 1;
+    --pixel: 1px;
+    --baseline: calc(var(--lineHeight) / 2);
+    --blockSpacingTop: 0;
+    --blockSpacingBottom: var(--lineHeight);
+    --hrThickness: 1px;
+    // formfield
+    --primary-color: #e0e01f;
+    --input-background: #FBF8F1;
+    --foreground-color: rgba(0, 0, 0);
+    --disabled: #a7a5a1;
+    // Fontsetting
+    --h1-size: 2.5rem;
+    --h2-size: 2rem;
+    --h3-size: 1.7rem;
+    --h4-size: 1.4rem;
+    --ratio: 1.25;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+    //   --sansFont: 'neue-haas-unica', 'Helvetica Neue', 'Helvetica', 'Arial',
+    //     sans-serif;
+    --sansFont: 'neue-haas-unica', sans-serif;
+    }
+  }
+
+@media (min-resolution: 1.5dppx) {
+    :root {
+        --displayScale: 2;
+        --pixel: 0.5px;
+    }
+}
+@media (min-resolution: 2.5dppx) {
+    :root {
+        --displayScale: 3;
+        --pixel: 0.34px;
+    }
+}
+@media (min-resolution: 3.5dppx) {
+    :root {
+        --displayScale: 4;
+        --pixel: 0.25px;
+    }
+}
