@@ -23,9 +23,9 @@
 
         <div class="description">
             <a href="{{ route('shop.productOrCategory.index', $product->url_key) }}" title="{{ $product->name }}">
-                <span>
+                <h3>
                     {{ $product->name }}
-                </span>
+                </h3>
             </a>
         </div>
 

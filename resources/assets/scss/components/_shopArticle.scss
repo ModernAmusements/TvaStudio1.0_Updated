@@ -31,9 +31,22 @@
     .price {
         justify-self: end;
         padding: calc(var(--fontSize) * 0.5);
+        h3 {
+            margin: 0;
+        }
+        .regular-price {
+            font-size: 20px;
+            text-decoration: line-through;
+        }
+        .special-price {
+            padding-left: calc(var(--fontSize) * 0.5);
+        }
     }
     .description {
         padding: calc(var(--fontSize) * 0.5);
+        h3 {
+            margin: 0;
+        }
     }
 }
 

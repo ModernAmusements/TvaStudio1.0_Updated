@@ -14,7 +14,8 @@
     border-bottom: var(--border);
     .categories-toggle {
         li {
-            font-size: 1rem;
+            font-size: 18px;
+            text-transform: uppercase;
             display: inline;
             padding: calc(var(--fontSize) * 0.5);
             a {
@@ -30,7 +31,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 560px) {
     .shop-categories {
         padding-bottom: 1rem;
         .categories-toggle {

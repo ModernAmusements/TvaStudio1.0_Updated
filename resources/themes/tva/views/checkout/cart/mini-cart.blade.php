@@ -3,7 +3,8 @@
 <?php $items = $cart->items; ?>
 <div class="nav-cart">
     <div class="cart-dropdown-container">
-        <div class="dropdown-toggle cart btn-grid btn-grid-black">
+        {{-- <div class="dropdown-toggle cart btn-grid btn-grid-black"> --}}
+            <div class="cart btn-grid btn-grid-black">
             {{-- Cart Toggle + Counter --}}
             <span class="name">
                 {{ ('Warenkorb') }}
@@ -81,7 +82,8 @@
 
             </div>
         {{-- Cart panel--}}
-        <div class="dropdown-list cart-panel">
+        {{-- <div class="dropdown-list cart-panel"> --}}
+            <div class="cart-panel">
             <div class="dropdown-container">
                 <div class="dropdown-cart">
                     <div class="dropdown-content cart-item">

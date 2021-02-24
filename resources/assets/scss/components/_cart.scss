@@ -1,6 +1,3 @@
-.cart-panel {
-    display: none;
-}
 .add-cart {
     width: 100%;
     text-transform: uppercase;
@@ -13,6 +10,9 @@
 }
 .cart-panel {
     text-transform: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     // grid-column: 1 / 9;
     grid-row: 2;
     position: absolute;
@@ -134,14 +134,22 @@
     }
 }
 
+.cart-panel.is-open {
+    opacity: 1;
+}
+
+
 #currentlyAdded {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 #currentlyAdded.cart-panel {
     grid-column: 1 / 9;
     border-top: none;
     z-index: 1000;
+    display: grid;
     border-bottom: none;
     color: var(--foreground-color);
     background: var(--tva-primary);
