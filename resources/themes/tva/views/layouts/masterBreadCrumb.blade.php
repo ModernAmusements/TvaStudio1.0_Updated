@@ -51,7 +51,8 @@
 
         @elseif ($addToCart = session('addToCart'))
             const currentlyAdded  = document.getElementById('currentlyAdded');
-             currentlyAdded.style.display='grid';
+                currentlyAdded.style.opacity='1';
+                currentlyAdded.style.left='0';
 
         @elseif ($warning = session('warning'))
             window.flashMessages = [{'type': 'alert-warning', 'message': "{{ $warning }}" }];

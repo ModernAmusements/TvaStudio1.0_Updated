@@ -18,17 +18,79 @@ Breadcrumbs::for('login', function ($trail) {
 });
 
 
-// Home
+// Profile Index
 Breadcrumbs::for('profileIndex', function ($trail) {
-    $trail->parent('login');
-    $trail->push('Home', route('customer.profile.index'));
+    $trail->parent('home');
+    $trail->push('Profil', route('customer.profile.index'));
 });
+
+// Profile Edit
+Breadcrumbs::for('profileEdit', function ($trail) {
+    $trail->parent('profileIndex');
+    $trail->push('Edit', route('customer.profile.edit'));
+});
+
+Breadcrumbs::for('profileAddress', function ($trail) {
+    $trail->parent('profileIndex');
+    $trail->push('Address', route('customer.address.index'));
+});
+
+Breadcrumbs::for('profileReviews', function ($trail) {
+    $trail->parent('profileIndex');
+    $trail->push('Reviews', route('customer.reviews.index'));
+});
+
+Breadcrumbs::for('profileWishlist', function ($trail) {
+    $trail->parent('profileIndex');
+    $trail->push('Wishlist', route('customer.wishlist.index'));
+});
+
+
+Breadcrumbs::for('profileCompare', function ($trail) {
+    $trail->parent('profileIndex');
+    $trail->push('Compare Products', route('velocity.product.compare'));
+});
+
+Breadcrumbs::for('profileOrders', function ($trail) {
+    $trail->parent('profileIndex');
+    $trail->push('Review Orders', route('customer.orders.index'));
+});
+
+
+Breadcrumbs::for('profileDownload', function ($trail) {
+    $trail->parent('profileIndex');
+    $trail->push('Downloadable Products', route('customer.downloadable_products.index'));
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Product
 Breadcrumbs::for('product', function ($trail) {
     $trail->parent('home');
     $trail->push('Product', route('shop.home.index'));
 });
+
+
+// Product
+Breadcrumbs::for('cart', function ($trail) {
+    $trail->parent('product');
+    $trail->push('Cart', route('shop.checkout.cart.index'));
+});
+
 
 
 

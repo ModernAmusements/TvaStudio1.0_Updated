@@ -1,10 +1,15 @@
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.customer.account.wishlist.page-title') }}
 @endsection
 
 @section('content-wrapper')
+
+
+<div class="bread-crumbs">
+    {{ Breadcrumbs::render('profileWishlist') }}
+</div>
     <div class="account-content">
 
         @inject ('productImageHelper', 'Webkul\Product\Helpers\ProductImage')

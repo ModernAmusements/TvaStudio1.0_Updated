@@ -238,7 +238,7 @@
 @push('scripts')
 <script>
  $(document).ready(function() {
-    $('body').delegate('.twa-login-toggle, .cart-panel, .nav-bar-mobile, .cart, #currentlyAdded, #header-bottom, .footer-newsletter, #menu-mobile', 'click', function(e) {
+    $('body').delegate('.twa-login-toggle, .cart-panel, .nav-bar-mobile, .cart-toggle, #currentlyAdded, #header-bottom, .footer-newsletter, #menu-mobile', 'click', function(e) {
         toggleDropdown(e);
     });
     function toggleDropdown(e) {
@@ -250,7 +250,7 @@
             $('#currentlyAdded').css("display", "none");
             $('#menu-mobile').toggleClass('is-open');
         }
-        if (currentElement.hasClass('cart')) {
+        if (currentElement.hasClass('cart-toggle')) {
             $('.cart-panel').toggleClass('is-open');
             $('.twa-login-panel').removeClass('is-open');
             $('.nav-bar-mobile').removeClass('is-open');

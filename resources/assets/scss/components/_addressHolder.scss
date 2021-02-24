@@ -6,6 +6,9 @@
     flex-wrap: wrap;
     width: 100%;
 }
+.address-card:first-child {
+    border-top: none;
+}
 .address-card {
     width: 100%;
     border-top: var(--border);

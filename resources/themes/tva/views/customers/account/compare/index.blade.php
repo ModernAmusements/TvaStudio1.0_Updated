@@ -1,4 +1,4 @@
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @include('shop::guest.compare.compare-products')
 
@@ -7,6 +7,10 @@
 @endsection
 
 @section('content-wrapper')
+
+<div class="bread-crumbs">
+    {{ Breadcrumbs::render('profileCompare') }}
+</div>
 
     <div class="account-content">
         @include('shop::customers.account.partials.sidemenu')

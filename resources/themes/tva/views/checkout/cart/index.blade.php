@@ -1,10 +1,13 @@
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.checkout.cart.title') }}
 @stop
 
 @section('content-wrapper')
+<div class="bread-crumbs">
+    {{ Breadcrumbs::render('cart') }}
+</div>
     @inject ('productImageHelper', 'Webkul\Product\Helpers\ProductImage')
     <section class="cart">
         @if ($cart)

@@ -1,12 +1,16 @@
 @inject ('productImageHelper', 'Webkul\Product\Helpers\ProductImage')
 
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.customer.account.review.index.page-title') }}
 @endsection
 
 @section('content-wrapper')
+
+<div class="bread-crumbs">
+    {{ Breadcrumbs::render('profileReviews') }}
+</div>
     <div class="account-content">
         @include('shop::customers.account.partials.sidemenu')
 

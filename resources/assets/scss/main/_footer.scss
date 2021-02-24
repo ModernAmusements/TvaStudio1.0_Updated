@@ -1,12 +1,13 @@
 footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    bottom: 0;
     transition: bottom 0.2s ease-in-out;
     width: 100%;
     background: var(--background-color);
     z-index: 2;
-    position: relative;
+    position: absolute;
+    // left: 0;
+    // bottom: 0;
     a:not(.btn-hover),
     p {
         padding: 11px 18px;

@@ -1,10 +1,14 @@
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.customer.account.order.view.page-tile', ['order_id' => $order->increment_id]) }}
 @endsection
 
 @section('content-wrapper')
+
+<div class="bread-crumbs">
+    {{ Breadcrumbs::render('profileOrders') }}
+</div>
 
     <div class="account-content">
         @include('shop::customers.account.partials.sidemenu')

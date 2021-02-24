@@ -1,11 +1,13 @@
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.customer.account.order.index.page-title') }}
 @endsection
 
 @section('content-wrapper')
-
+<div class="bread-crumbs">
+    {{ Breadcrumbs::render('profileOrders') }}
+</div>
     <div class="account-content">
         @include('shop::customers.account.partials.sidemenu')
 

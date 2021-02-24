@@ -234,11 +234,16 @@ header {
     padding: 1em;
     margin-top: 45px;
     border-bottom: var(--border);
+    justify-content: center;
     .breadcrumb {
         display: flex;
         flex-direction: row;
         li {
             display: block;
+            opacity: 0.5;
+        }
+        li.active {
+            opacity: 1;
         }
     }
     .breadcrumb li + li:before {

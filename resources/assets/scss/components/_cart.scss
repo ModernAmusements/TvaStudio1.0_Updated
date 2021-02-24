@@ -157,7 +157,6 @@
 
 #currentlyAdded {
     opacity: 0;
-    pointer-events: none;
     transition: opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
@@ -169,7 +168,7 @@
     border-bottom: none;
     color: var(--foreground-color);
     background: var(--tva-primary);
-    left: 0;
+    left: -100%;
     .cart-content {
         display: flex;
         flex-direction: row;

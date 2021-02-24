@@ -1,4 +1,4 @@
-@extends('shop::layouts.masterSignUp')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.customer.account.profile.index.title') }}

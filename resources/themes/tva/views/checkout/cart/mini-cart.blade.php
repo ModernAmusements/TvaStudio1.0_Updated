@@ -4,7 +4,7 @@
 <div class="nav-cart">
     <div class="cart-dropdown-container">
         {{-- <div class="dropdown-toggle cart btn-grid btn-grid-black"> --}}
-            <div class="cart btn-grid btn-grid-black">
+            <div class="cart-toggle btn-grid btn-grid-black">
             {{-- Cart Toggle + Counter --}}
             <span class="name">
                 {{ ('Warenkorb') }}
@@ -88,7 +88,7 @@
                 <div class="dropdown-cart">
                     <div class="dropdown-content cart-item">
                         <div class="cart-legend-heading">
-                            <div class="btn-close cart">
+                            <div class="btn-close cart-toggle">
                                 Close
                           </div>
                           <div class="legend-heading">
