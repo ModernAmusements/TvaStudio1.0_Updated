@@ -12,64 +12,52 @@
     @include('shop::checkout.cart.coupon')
 
     <script type="text/x-template" id="checkout-template">
-        <div id="checkout" class="checkout-process">
-            <div class="col-main">
-                <ul class="checkout-steps">
-                    <li class="active" :class="[completed_step >= 0 ? 'active' : '', completed_step > 0 ? 'completed' : '']" @click="navigateToStep(1)">
-                        <div class="decorator address-info"></div>
-                        <span>{{ __('shop::app.checkout.onepage.information') }}</span>
-                    </li>
+        <div id="checkout" class="checkout-wrapper">
+            <div class="checkout-content">
+                <div class="left-side">
 
-                    <div class="line mb-25"></div>
-
-                    @if ($cart->haveStockableItems())
-                        <li :class="[current_step == 2 || completed_step > 1 ? 'active' : '', completed_step > 1 ? 'completed' : '']" @click="navigateToStep(2)">
-                            <div class="decorator shipping"></div>
-                            <span>{{ __('shop::app.checkout.onepage.shipping') }}</span>
+                    <ul class="checkout-steps">
+                        <li class="active" :class="[completed_step >= 0 ? 'active' : '', completed_step > 0 ? 'completed' : '']" @click="navigateToStep(1)">
+                            <span>{{ __('shop::app.checkout.onepage.information') }}</span>
                         </li>
+                        @if ($cart->haveStockableItems())
+                            <li :class="[current_step == 2 || completed_step > 1 ? 'active' : '', completed_step > 1 ? 'completed' : '']" @click="navigateToStep(2)">                            <span>{{ __('shop::app.checkout.onepage.shipping') }}</span>
+                            </li>
+                        @endif
+                        <li :class="[current_step == 3 || completed_step > 2 ? 'active' : '', completed_step > 2 ? 'completed' : '']" @click="navigateToStep(3)">
+                            <span>{{ __('shop::app.checkout.onepage.payment') }}</span>
+                        </li>
+                        <li :class="[current_step == 4 ? 'active' : '']">
+                            <span>{{ __('shop::app.checkout.onepage.complete') }}</span>
+                        </li>
+                    </ul>
 
-                        <div class="line mb-25"></div>
-                    @endif
-
-                    <li :class="[current_step == 3 || completed_step > 2 ? 'active' : '', completed_step > 2 ? 'completed' : '']" @click="navigateToStep(3)">
-                        <div class="decorator payment"></div>
-                        <span>{{ __('shop::app.checkout.onepage.payment') }}</span>
-                    </li>
-
-                    <div class="line mb-25"></div>
-
-                    <li :class="[current_step == 4 ? 'active' : '']">
-                        <div class="decorator review"></div>
-                        <span>{{ __('shop::app.checkout.onepage.complete') }}</span>
-                    </li>
-                </ul>
-
-                <div class="step-content information" v-show="current_step == 1" id="address-section">
-                    @include('shop::checkout.onepage.customer-info')
-
-                    <div class="button-group">
-                        <button type="button" class="btn btn-lg btn-primary" @click="validateForm('address-form')" :disabled="disable_button" id="checkout-address-continue-button">
-                            {{ __('shop::app.checkout.onepage.continue') }}
-                        </button>
+                    <div class="step-content information" v-show="current_step == 1" id="address-section">
+                        @include('shop::checkout.onepage.customer-info')
+                        <div class="btn-grid border btn-grid-primary">
+                            <button type="button" class="btn-hover" @click="validateForm('address-form')" :disabled="disable_button" id="checkout-address-continue-button">
+                                {{ __('shop::app.checkout.onepage.continue') }}
+                            </button>
+                        </div>
                     </div>
-                </div>
 
                 <div class="step-content shipping" v-show="current_step == 2" id="shipping-section">
+
                     <shipping-section v-if="current_step == 2" @onShippingMethodSelected="shippingMethodSelected($event)"></shipping-section>
 
-                    <div class="button-group">
-                        <button type="button" class="btn btn-lg btn-primary" @click="validateForm('shipping-form')" :disabled="disable_button" id="checkout-shipping-continue-button">
+                    <div class="btn-grid border btn-grid-primary">
+                        <button type="button" class="btn-hover" @click="validateForm('shipping-form')" :disabled="disable_button" id="checkout-shipping-continue-button">
                             {{ __('shop::app.checkout.onepage.continue') }}
                         </button>
-
                     </div>
+
                 </div>
 
                 <div class="step-content payment" v-show="current_step == 3" id="payment-section">
                     <payment-section v-if="current_step == 3" @onPaymentMethodSelected="paymentMethodSelected($event)"></payment-section>
 
-                    <div class="button-group">
-                        <button type="button" class="btn btn-lg btn-primary" @click="validateForm('payment-form')" :disabled="disable_button" id="checkout-payment-continue-button">
+                    <div class="btn-grid border btn-grid-primary">
+                        <button type="button" class="btn-hover" @click="validateForm('payment-form')" :disabled="disable_button" id="checkout-payment-continue-button">
                             {{ __('shop::app.checkout.onepage.continue') }}
                         </button>
                     </div>
@@ -87,17 +75,19 @@
                         </div>
                     </review-section>
 
-                    <div class="button-group">
-                        <button type="button" class="btn btn-lg btn-primary" @click="placeOrder()" :disabled="disable_button" id="checkout-place-order-button">
+                    <div class="btn-grid border btn-grid-primary">
+                        <button type="button" class="btn-hover" @click="placeOrder()" :disabled="disable_button" id="checkout-place-order-button">
                             {{ __('shop::app.checkout.onepage.place-order') }}
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-right" v-show="current_step != 4">
+            <div class="right-side" v-show="current_step != 4">
                 <summary-section :key="summeryComponentKey"></summary-section>
             </div>
+
+        </div>
         </div>
     </script>
 

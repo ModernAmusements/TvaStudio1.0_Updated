@@ -1,0 +1,95 @@
+#checkout {
+
+        .checkout-content {
+            width: 100%;
+            padding: 0 2em;
+            margin-bottom: 100px;
+            margin-top: 22px;
+            height: 100vh;
+            .left-side {
+                width: 66%;
+                float: left;
+            }
+            .right-side {
+                width: 33%;
+                display: inline-block;
+                margin-left: 10px;
+                border-left: var(--border);
+                .order-summary {
+                    border-top: var(--border);
+                    border-right: var(--border);
+                    border-bottom: var(--border);
+                }
+                .summary-titel  {
+                    border-bottom: var(--border);
+                    height: 50px;
+                    padding: 14px;
+                }
+                .item-detail,
+                #grand-total-detail {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 50px;
+                    padding: 14px;
+                }
+                .item-detail {
+                    border-bottom: var(--border);
+                }
+
+            }
+        }
+
+    .checkout-steps {
+        border-bottom: var(--border);
+        border-top: var(--border);
+        display: flex;
+        border-left: var(--border);
+        border-right: var(--border);
+        justify-content: space-between;
+        li {
+            opacity: 0.5;
+        }
+        li.active {
+            opacity: 1;
+        }
+    }
+    .form-container {
+        border-left: var(--border);
+        border-right: var(--border);
+        .form-header {
+            padding: 1em;
+            h1 {
+                margin: 0;
+            }
+        }
+    }
+    .order-summary {
+        border-bottom: var(--border);
+    }
+    .control-group {
+        border-top: var(--border);
+        position: relative;
+        label {
+            font-size: 14px;
+            border-bottom: var(--border);
+            width: 100%;
+            display: flex;
+            padding-left: 5px;
+        }
+        input {
+            height: 49px;
+        }
+    }
+    .address-card {
+        padding: 1em;
+    }
+    .checkout-address-content {
+        display: flex;
+        .address-card-list  {
+            font-size: 18px;
+        }
+    }
+}

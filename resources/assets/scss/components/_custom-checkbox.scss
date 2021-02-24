@@ -44,7 +44,49 @@
 
 }
 
+.control-group {
+    input[type="checkbox"] {
+        position: absolute;
+        left: -15px;
+        display: none;
+      }
 
+      input[type="checkbox"] + label {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"] + label:before {
+        width: 45px;
+        height: 30px;
+        border: 2px solid var(--tva-primary);
+        background-color: var(--primary);
+        content: "";
+        margin-right: 15px;
+        transition: background-color 0.5s linear;
+        margin-top: 4px;
+      }
+
+      input[type="checkbox"] + label:after {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        content: "";
+        transition: margin 0.1s linear;
+        position: absolute;
+        top: 4px;
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        background-color: var(--primary-color);
+      }
+
+      input[type="checkbox"]:checked + label:after {
+        margin: 0 0 0 15px;
+      }
+}
 
 .control-group-radio {
     input[type="checkbox"] {
@@ -136,3 +178,48 @@
 
 }
 
+
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        background-color: var(--background-color);
+        border:var(--border);
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        height: 28px;
+        width: 28px;
+        background-color: var(--primary-color);
+        transition: background-color 0.5s linear;
+    }
+    input:checked ~ .checkmark:after {
+        display: block;
+        opacity: 1;
+    }
+    input:disabled ~ .checkmark {
+        display: block;
+        border: 2px solid rgba(255, 100, 113, 0.4);
+    }
+}
