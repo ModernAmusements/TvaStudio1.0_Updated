@@ -11,7 +11,6 @@
 .cart-panel {
     text-transform: none;
     opacity: 0;
-    pointer-events: none;
     transition: opacity 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     // grid-column: 1 / 9;
     grid-row: 2;
@@ -19,7 +18,7 @@
     color: var(--foreground-color);
     background: var(--tva-primary);
     width: 100%;
-    left: 0;
+    left: -100%;
 
     .cart-header {
         width: 30%;
@@ -45,9 +44,21 @@
     .cart-item {
         border-top: var(--border);
         border-bottom: var(--border);
+        .cart-legend-heading {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: var(--border);
+            width: 100%;
+            .legend-heading {
+                padding: 12px;
+                h2 {
+                    margin: 0;
+                }
+            }
+        }
         .cart-legend {
             display: grid;
-            grid-template-columns: 120px 3fr 2fr 1fr;
+            grid-template-columns: 119px 3fr 2fr 1fr;
             width: 100%;
             border-bottom: var(--border);
             .cart-legend-item,
@@ -59,6 +70,9 @@
             }
             .cart-legend-price {
                 justify-self: end;
+            }
+            .cart-legend-image{
+                border-left: none;
             }
         }
     }
@@ -73,7 +87,7 @@
         border-bottom: var(--border);
         display: grid;
         grid-template-columns: 120px 1fr;
-        border-left: var(--border);
+        // border-left: var(--border);
         .title {
             padding: calc(var(--fontSize) * 0.5);
         }
@@ -134,8 +148,10 @@
     }
 }
 
+
 .cart-panel.is-open {
     opacity: 1;
+    left: 0;
 }
 
 
@@ -153,6 +169,7 @@
     border-bottom: none;
     color: var(--foreground-color);
     background: var(--tva-primary);
+    left: 0;
     .cart-content {
         display: flex;
         flex-direction: row;
@@ -207,7 +224,6 @@
             border-bottom: var(--border);
             display: grid;
             grid-template-columns: 120px 1fr;
-            border-left: var(--border);
             .title {
             }
             .price {
@@ -279,9 +295,16 @@
                 display: none;
             }
         }
+        .mini-cart-cta {
+            border-left: none;
+        }
+        .cart-header {
+            border-left: none;
+        }
     }
     .cart-mobile {
         grid-column: 4 / 5;
         grid-row: 1;
     }
+
 }

@@ -87,6 +87,14 @@
             <div class="dropdown-container">
                 <div class="dropdown-cart">
                     <div class="dropdown-content cart-item">
+                        <div class="cart-legend-heading">
+                            <div class="btn-close cart">
+                                Close
+                          </div>
+                          <div class="legend-heading">
+                               <h2>Warenkorb</h2>
+                          </div>
+                        </div>
                         <div class="cart-legend">
                             <div class="cart-legend-image">
                                 Abbildung

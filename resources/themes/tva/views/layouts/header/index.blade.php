@@ -58,7 +58,7 @@
     @guest('customer')
     <div class="twa-login-panel account guest">
        <div class="login-panel-heading">
-          <div class="twa-login-toggle btn-close">
+          <div class="btn-close twa-login-toggle">
                 Close
           </div>
           <div class="menu-heading">
