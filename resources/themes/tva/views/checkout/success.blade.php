@@ -1,4 +1,4 @@
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.checkout.success.title') }}
@@ -6,20 +6,24 @@
 
 @section('content-wrapper')
 
-    <div class="order-success-content" style="min-height: 300px;">
+<div class="bread-crumbs">
+    {{ Breadcrumbs::render('orderSuccess') }}
+</div>
+
+    <div class="order-success-content">
         <h1>{{ __('shop::app.checkout.success.thanks') }}</h1>
 
-        <p>{{ __('shop::app.checkout.success.order-id-info', ['order_id' => $order->increment_id]) }}</p>
+        <p class="paragraph">{{ __('shop::app.checkout.success.order-id-info', ['order_id' => $order->increment_id]) }}</p>
 
         <p>{{ __('shop::app.checkout.success.info') }}</p>
 
         {{ view_render_event('bagisto.shop.checkout.continue-shopping.before', ['order' => $order]) }}
 
-        <div class="misc-controls">
-            <a style="display: inline-block" href="{{ route('shop.home.index') }}" class="btn btn-lg btn-primary">
-                {{ __('shop::app.checkout.cart.continue-shopping') }}
-            </a>
-        </div>
+    <div class="btn-grid border-l mt-s mb-s border-b border-t border-r btn-grid-primary">
+        <a  href="{{ route('shop.home.index') }}" class="btn-hover">
+            {{ __('shop::app.checkout.cart.continue-shopping') }}
+        </a>
+    </div>
 
         {{ view_render_event('bagisto.shop.checkout.continue-shopping.after', ['order' => $order]) }}
 

@@ -1,11 +1,18 @@
-@extends('shop::layouts.master')
+@extends('shop::layouts.masterBreadCrumb')
 
 @section('page_title')
     {{ __('shop::app.checkout.onepage.title') }}
 @stop
 
 @section('content-wrapper')
-    <checkout></checkout>
+
+        <div class="bread-crumbs">
+            {{ Breadcrumbs::render('checkout') }}
+        </div>
+
+    <checkout>
+
+    </checkout>
 @endsection
 
 @push('scripts')
@@ -15,6 +22,7 @@
         <div id="checkout" class="checkout-wrapper">
             <div class="checkout-content">
                 <div class="left-side">
+
 
                     <ul class="checkout-steps">
                         <li class="active" :class="[completed_step >= 0 ? 'active' : '', completed_step > 0 ? 'completed' : '']" @click="navigateToStep(1)">
@@ -33,8 +41,10 @@
                     </ul>
 
                     <div class="step-content information" v-show="current_step == 1" id="address-section">
+
                         @include('shop::checkout.onepage.customer-info')
-                        <div class="btn-grid border btn-grid-primary">
+
+                        <div class="btn-grid border-l mt-s mb-s border-b border-t border-r btn-grid-primary">
                             <button type="button" class="btn-hover" @click="validateForm('address-form')" :disabled="disable_button" id="checkout-address-continue-button">
                                 {{ __('shop::app.checkout.onepage.continue') }}
                             </button>
@@ -43,9 +53,11 @@
 
                 <div class="step-content shipping" v-show="current_step == 2" id="shipping-section">
 
-                    <shipping-section v-if="current_step == 2" @onShippingMethodSelected="shippingMethodSelected($event)"></shipping-section>
+                    <shipping-section v-if="current_step == 2" @onShippingMethodSelected="shippingMethodSelected($event)">
 
-                    <div class="btn-grid border btn-grid-primary">
+                    </shipping-section>
+
+                    <div class="btn-grid border mt-s mb-s btn-grid-primary">
                         <button type="button" class="btn-hover" @click="validateForm('shipping-form')" :disabled="disable_button" id="checkout-shipping-continue-button">
                             {{ __('shop::app.checkout.onepage.continue') }}
                         </button>
@@ -56,7 +68,7 @@
                 <div class="step-content payment" v-show="current_step == 3" id="payment-section">
                     <payment-section v-if="current_step == 3" @onPaymentMethodSelected="paymentMethodSelected($event)"></payment-section>
 
-                    <div class="btn-grid border btn-grid-primary">
+                    <div class="btn-grid border mt-s mb-s btn-grid-primary">
                         <button type="button" class="btn-hover" @click="validateForm('payment-form')" :disabled="disable_button" id="checkout-payment-continue-button">
                             {{ __('shop::app.checkout.onepage.continue') }}
                         </button>
@@ -75,7 +87,7 @@
                         </div>
                     </review-section>
 
-                    <div class="btn-grid border btn-grid-primary">
+                    <div class="btn-grid border mt-s mb-s btn-grid-primary">
                         <button type="button" class="btn-hover" @click="placeOrder()" :disabled="disable_button" id="checkout-place-order-button">
                             {{ __('shop::app.checkout.onepage.place-order') }}
                         </button>

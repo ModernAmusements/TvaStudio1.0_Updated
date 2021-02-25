@@ -5,20 +5,22 @@
             <h1 class="checkout-step-heading">
                 {{ __('shop::app.checkout.onepage.billing-address') }}
             </h1>
-            <div class="btn-grid border-t btn-grid-primary">
-                <a class="btn-hover" @click = newBillingAddress()>
-                    <span>{{ __('shop::app.checkout.onepage.new-address') }}</span>
-                </a>
-            </div>
-        </div>
 
+        </div>
+        <div class="btn-grid border-t border-b btn-grid-primary">
+            <a class="btn-hover" @click = newBillingAddress()>
+                <span>{{ __('shop::app.checkout.onepage.new-address') }}</span>
+            </a>
+        </div>
         <div class="address-holder">
             <div class="address-card" v-for='(addresses, index) in this.allAddress'>
                 <div class="checkout-address-content">
+
                     <label class="radio-container"">
                         <input type="radio" v-validate="'required'" id="billing[address_id]" name="billing[address_id]" :value="addresses.id" v-model="address.billing.address_id" data-vv-as="&quot;{{ __('shop::app.checkout.onepage.billing-address') }}&quot;">
                         <span class="checkmark"></span>
                     </label>
+
                     <ul class="address-card-list">
                         <li>
                             <b>@{{ allAddress.first_name }} @{{ allAddress.last_name }},</b>
@@ -56,8 +58,8 @@
         </div>
         @if ($cart->haveStockableItems())
             <div class="control-group">
-                <label class="checkbox-view" for="billing[use_for_shipping]"> {{ __('shop::app.checkout.onepage.use_for_shipping') }}</label>
                 <input type="checkbox" id="billing[use_for_shipping]" name="billing[use_for_shipping]" v-model="address.billing.use_for_shipping"/>
+                <label class="checkbox-view" for="billing[use_for_shipping]">{{ __('shop::app.checkout.onepage.use_for_shipping') }}</label>
             </div>
         @endif
     </div>
@@ -65,17 +67,17 @@
     <div class="form-container" v-if="this.new_billing_address">
         <div class="form-header">
             <h1>{{ __('shop::app.checkout.onepage.billing-address') }}</h1>
-            @auth('customer')
-                @if(count(auth('customer')->user()->addresses))
-                    <div class="btn-grid border-t btn-grid-primary">
-                        <a class="btn-hover" @click = backToSavedBillingAddress()>
-                            {{ __('shop::app.checkout.onepage.back') }}
-                        </a>
-                    </div>
-
-                @endif
-            @endauth
         </div>
+        @auth('customer')
+        @if(count(auth('customer')->user()->addresses))
+            <div class="btn-grid border-t btn-grid-primary">
+                <a class="btn-hover" @click = backToSavedBillingAddress()>
+                    {{ __('shop::app.checkout.onepage.back') }}
+                </a>
+            </div>
+
+        @endif
+        @endauth
         <div class="control-group" :class="[errors.has('address-form.billing[email]') ? 'has-error' : '']">
             <label for="billing[email]" class="required">{{ __('shop::app.checkout.onepage.email') }}</label>
             <input type="text" v-validate="'required|email'" class="control form-control subscribe-field form-sub" id="billing[email]" name="billing[email]" v-model="address.billing.email" data-vv-as="&quot;{{ __('shop::app.checkout.onepage.email') }}&quot;" @blur="isCustomerExist"/>
@@ -224,8 +226,10 @@
                 <span class="checkout-step-heading">
                     {{ __('shop::app.checkout.onepage.shipping-address') }}
                 </span>
+            </div>
 
-                <a class="btn btn-lg btn-primary" @click=newShippingAddress()>
+            <div class="btn-grid border-t btn-grid-primary">
+                <a class="btn-hover" @click=newShippingAddress()>
                     {{ __('shop::app.checkout.onepage.new-address') }}
                 </a>
             </div>
@@ -280,14 +284,21 @@
 
             <div class="form-header">
                 <h1>{{ __('shop::app.checkout.onepage.shipping-address') }}</h1>
-                @auth('customer')
-                    @if(count(auth('customer')->user()->addresses))
-                        <a class="btn btn-lg btn-primary" @click = backToSavedShippingAddress()>
-                            {{ __('shop::app.checkout.onepage.back') }}
-                        </a>
-                    @endif
-                @endauth
             </div>
+
+            @auth('customer')
+            @if(count(auth('customer')->user()->addresses))
+
+
+            <div class="btn-grid border-l mt-s mb-s border-b border-t border-r btn-grid-primary">
+
+                <a class="btn-hover" @click = backToSavedShippingAddress()>
+                    {{ __('shop::app.checkout.onepage.back') }}
+                </a>
+            </div>
+
+            @endif
+            @endauth
 
             <div class="control-group" :class="[errors.has('address-form.shipping[first_name]') ? 'has-error' : '']">
                 <label for="shipping[first_name]" class="required">
@@ -424,9 +435,8 @@
 
             @auth('customer')
                 <div class="control-group">
-
-                        <input type="checkbox" id="shipping[save_as_address]" name="shipping[save_as_address]" v-model="address.shipping.save_as_address"/>
-                        <label class="checkbox-view" for="shipping[save_as_address]">  {{ __('shop::app.checkout.onepage.save_as_address') }}</label>
+                    <input type="checkbox" id="shipping[save_as_address]" name="shipping[save_as_address]" v-model="address.shipping.save_as_address"/>
+                    <label class="checkbox-view" for="shipping[save_as_address]">  {{ __('shop::app.checkout.onepage.save_as_address') }}</label>
                 </div>
             @endauth
 

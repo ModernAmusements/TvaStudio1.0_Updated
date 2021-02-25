@@ -63,6 +63,10 @@ img {
     margin-top: 10px
 }
 
+.mb-s {
+    margin-bottom: 10px
+}
+
 
 a.left {
     position: relative;
@@ -91,5 +95,6 @@ a.left {
 
 
     .main-container-wrapper {
-        margin-bottom: 10%;
+
+        min-height: 100vh;
     }

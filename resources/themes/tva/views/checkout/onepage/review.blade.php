@@ -1,30 +1,31 @@
 <div class="form-container">
-    <div class="form-header mb-30">
-        <span class="checkout-step-heading">{{ __('shop::app.checkout.onepage.summary') }}</span>
+    <div class="form-header">
+        <h1 class="checkout-step-heading">
+            {{ __('shop::app.checkout.onepage.summary') }}
+        </h1>
     </div>
+
 
     <div class="address-summary">
         @if ($billingAddress = $cart->billing_address)
             <div class="billing-address">
-                <div class="card-title mb-20">
+                <div class="card-title">
                     <b>{{ __('shop::app.checkout.onepage.billing-address') }}</b>
                 </div>
 
                 <div class="card-content">
                     <ul>
-                        <li class="mb-10">
+                        <li>
                             {{ $billingAddress->first_name }} {{ $billingAddress->last_name }}
                         </li>
-                        <li class="mb-10">
+                        <li>
                             {{ $billingAddress->address1 }},<br/> {{ $billingAddress->state }}
                         </li>
-                        <li class="mb-10">
+                        <li>
                             {{ core()->country_name($billingAddress->country) }} {{ $billingAddress->postcode }}
                         </li>
 
-                        <span class="horizontal-rule mb-15 mt-15"></span>
-
-                        <li class="mb-10">
+                        <li>
                             {{ __('shop::app.checkout.onepage.contact') }} : {{ $billingAddress->phone }}
                         </li>
                     </ul>
@@ -34,25 +35,22 @@
 
         @if ($cart->haveStockableItems() && $shippingAddress = $cart->shipping_address)
             <div class="shipping-address">
-                <div class="card-title mb-20">
+                <div class="card-title">
                     <b>{{ __('shop::app.checkout.onepage.shipping-address') }}</b>
                 </div>
 
                 <div class="card-content">
                     <ul>
-                        <li class="mb-10">
+                        <li>
                             {{ $shippingAddress->first_name }} {{ $shippingAddress->last_name }}
                         </li>
-                        <li class="mb-10">
+                        <li>
                             {{ $shippingAddress->address1 }},<br/> {{ $shippingAddress->state }}
                         </li>
-                        <li class="mb-10">
+                        <li>
                             {{ core()->country_name($shippingAddress->country) }} {{ $shippingAddress->postcode }}
                         </li>
-
-                        <span class="horizontal-rule mb-15 mt-15"></span>
-
-                        <li class="mb-10">
+                        <li>
                             {{ __('shop::app.checkout.onepage.contact') }} : {{ $shippingAddress->phone }}
                         </li>
                     </ul>
@@ -64,13 +62,13 @@
 
     @inject ('productImageHelper', 'Webkul\Product\Helpers\ProductImage')
 
-    <div class="cart-item-list mt-20">
+    <div class="cart-item-list">
         @foreach ($cart->items as $item)
             @php
                 $productBaseImage = $item->product->getTypeInstance()->getBaseImage($item);
             @endphp
 
-            <div class="item mb-5" style="margin-bottom: 5px;">
+            <div class="item-review">
                 <div class="item-image">
                     <img src="{{ $productBaseImage['medium_image_url'] }}" />
                 </div>
@@ -80,7 +78,12 @@
                     {!! view_render_event('bagisto.shop.checkout.name.before', ['item' => $item]) !!}
 
                     <div class="item-title">
-                        {{ $item->product->name }}
+                        <span class="title">
+                            Name:
+                        </span>
+                       <h3>
+                            {{ $item->product->name }}
+                        </h3>
                     </div>
 
                     {!! view_render_event('bagisto.shop.checkout.name.after', ['item' => $item]) !!}
@@ -88,11 +91,11 @@
 
                     <div class="row">
                         <span class="title">
-                            {{ __('shop::app.checkout.onepage.price') }}
+                            {{ __('shop::app.checkout.onepage.price') }}:
                         </span>
-                        <span class="value">
+                        <h4 class=" value">
                             {{ core()->currency($item->base_price) }}
-                        </span>
+                        </h4>
                     </div>
 
                     {!! view_render_event('bagisto.shop.checkout.price.after', ['item' => $item]) !!}
@@ -100,11 +103,11 @@
 
                     <div class="row">
                         <span class="title">
-                            {{ __('shop::app.checkout.onepage.quantity') }}
+                            {{ __('shop::app.checkout.onepage.quantity') }}:
                         </span>
-                        <span class="value">
+                        <h4 class="value">
                             {{ $item->quantity }}
-                        </span>
+                        </h4>
                     </div>
 
                     {!! view_render_event('bagisto.shop.checkout.quantity.after', ['item' => $item]) !!}
@@ -127,12 +130,15 @@
         @endforeach
     </div>
 
-    <div class="order-description mt-20">
-        <div class="pull-left" style="width: 60%; float: left;">
+    <div class="order-description">
+
             @if ($cart->haveStockableItems())
                 <div class="shipping">
-                    <div class="decorator">
-                        <i class="icon shipping-icon"></i>
+
+                    <div class="form-header">
+                        <h4 class="checkout-step-heading">
+                            Shipping
+                        </h4>
                     </div>
 
                     <div class="text">
@@ -146,8 +152,11 @@
             @endif
 
             <div class="payment">
-                <div class="decorator">
-                    <i class="icon payment-icon"></i>
+
+                <div class="form-header">
+                    <h4 class="checkout-step-heading">
+                        Payment
+                    </h4>
                 </div>
 
                 <div class="text">
@@ -155,10 +164,9 @@
                 </div>
             </div>
 
-        </div>
+            {{-- <slot name="summary-section">
 
-        <div class="pull-right" style="width: 40%; float: left;">
-            <slot name="summary-section"></slot>
-        </div>
+            </slot> --}}
+
     </div>
 </div>
