@@ -12,8 +12,8 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: tva_testing
-          MYSQL_USER: root
+          MYSQL_DATABASE: bagisto_testing
+          MYSQL_USER: bagisto
           MYSQL_PASSWORD: secret
         ports:
           - 3306
