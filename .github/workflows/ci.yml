@@ -41,7 +41,7 @@ jobs:
         run: |
           set -e
           composer global require hirak/prestissimo
-          composer install --no-interaction --ansi --no-progress --no-suggest --optimize-autoloader
+          composer install --no-interaction --ansi --no-progress --no-suggest --optimize-autoloader --ignore-platform-reqs
 
       - name: Migrate database
         run: set -e && php artisan migrate --env=testing
