@@ -43,7 +43,7 @@ jobs:
           composer install --no-interaction --ansi --no-progress --no-suggest --optimize-autoloader
 
       - name: Migrate database
-        run: set -e && php artisan migrate --env=testing
+        run: set -e && php artisan migrate --env=example
 
       - name: Persist test artifacts
         uses: actions/upload-artifact@v1
