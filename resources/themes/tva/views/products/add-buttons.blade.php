@@ -3,7 +3,7 @@
         <span class="">More</span>
     </a>
 </div>
-<div id="addToCart" class="article-cart btn-grid btn-grid-primary">
+<div id="addToCart" class="article-cart btn-grid btn-grid-black">
     <form class="add-cart" action="{{ route('cart.add', $product->product_id) }}" method="POST">
         @csrf
         <input type="hidden" name="product_id" value="{{ $product->product_id }}">

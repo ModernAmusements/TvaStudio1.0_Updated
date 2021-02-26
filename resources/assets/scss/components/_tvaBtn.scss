@@ -47,7 +47,7 @@
     white-space: nowrap;
     cursor: pointer;
     display: grid;
-    font-size: 16px;
+    font-size: 18px;
     // text-transform: uppercase;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .btn-grid-primary {
-    background-color: var(--tva-primary);
+    // background-color: var(--tva-primary);
 }
 .btn-grid-black {
     background-color: var(--background-color);
@@ -106,9 +106,13 @@
         animation-timing-function: linear;
     }
 }
+
+
 .btn-grid-black:hover {
-    background-color: var(--foreground-color);
-    span {
+    background-color: var(--tva-dark-green);
+    span,
+    button,
+    a {
         color: var(--background-color);
     }
     .btn-hover {
@@ -133,10 +137,28 @@
         animation-timing-function: linear;
     }
 }
+
 .btn-grid-primary:active,
 .btn:active {
     background-color: var(--tva-secondary);
 }
+
+.btn-grid-primary:focus,
+.btn:focus {
+    background-color: var(--tva-primary);
+}
+.btn-grid-primary.is-open {
+    background-color: var(--tva-primary);
+}
+
+.btn-grid-black.is-open {
+    background-color: var(--tva-dark-green);
+    span {
+        color: var(--background-color);
+    }
+}
+
+
 @media (max-width: 1250px) {
     .btn-hover {
         padding: 2em 3.2em;

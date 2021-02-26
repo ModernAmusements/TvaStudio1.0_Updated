@@ -231,14 +231,14 @@
 <!-- Header CATS -->
 <div class="header-bottom shop-categories" id="header-bottom">
     <div class="categories-heading">
-        <h1 class="single-line xlarge">@yield('page_title')</h1>
+        <h1 class="single-line xxxlarge">@yield('page_title')</h1>
     </div>
     @include('shop::layouts.header.nav-menu.navmenu')
 </div>
 @push('scripts')
 <script>
  $(document).ready(function() {
-    $('body').delegate('.twa-login-toggle, .cart-panel, .nav-bar-mobile, .cart-toggle, #currentlyAdded, #header-bottom, .footer-newsletter, #menu-mobile', 'click', function(e) {
+    $('body').delegate('.twa-login-toggle, .btn-close, .cart-panel, .nav-bar-mobile, .cart-toggle, #currentlyAdded, .footer-newsletter, #menu-mobile', 'click', function(e) {
         toggleDropdown(e);
     });
     function toggleDropdown(e) {
@@ -252,6 +252,7 @@
         }
         if (currentElement.hasClass('cart-toggle')) {
             $('.cart-panel').toggleClass('is-open');
+            $('.cart-toggle').toggleClass('is-open');
             $('.twa-login-panel').removeClass('is-open');
             $('.nav-bar-mobile').removeClass('is-open');
             $('#currentlyAdded').css("display", "none");
@@ -270,10 +271,11 @@
             currentElement.toggleClass('is-open');
             $('.footer-newsletter-panel').toggleClass('is-open');
         }
-         if (currentElement.hasClass('header-bottom')) {
-             $('.cart').removeClass('active');
-             $('.twa-login-panel').removeClass('is-open');
-             $('#currentlyAdded').css("display", "none");
+
+        if (currentElement.hasClass('btn-close')) {
+            $('.twa-login-toggle').removeClass('is-open');
+            $('#menu-desktop').removeClass('is-open');
+            $('.cart-toggle').removeClass('is-open');
          }
     }
     });

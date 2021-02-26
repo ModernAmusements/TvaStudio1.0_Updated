@@ -4039,7 +4039,7 @@ select:-webkit-autofill:focus {
 }
 
 .shop-categories .categories-toggle li {
-  font-size: 18px;
+
   text-transform: uppercase;
   display: inline;
   padding: calc(var(--fontSize) * 0.5);

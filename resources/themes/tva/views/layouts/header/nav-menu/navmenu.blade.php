@@ -11,7 +11,7 @@
         <div class="categories-toggle">
             <ul class="nav">
                 @foreach ($categories as $key => $category)
-                    <li class="{{ Request::is($category->slug) ? ' active' : '' }}" >
+                    <li class="medium" class="{{ Request::is($category->slug) ? ' active' : '' }}" >
                         <a class="left" href="{{ route('shop.productOrCategory.index', $category->slug) }}">{{ $category->name }}</a>
                     </li>
                 @endforeach

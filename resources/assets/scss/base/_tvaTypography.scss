@@ -166,16 +166,9 @@ h6,
 
 /* large headers */
 
-h1.large,
-.h1.large {
-  --h1-size: 4rem;
-  line-height: calc(var(--lineHeight) * 3);
-  font-weight: 730;
-}
-
 h1.xlarge,
 .h1.xlarge {
-  --h1-size: 5rem;
+  --h1-size: 3.5rem;
   line-height: calc(var(--lineHeight) * 4);
   font-weight: 400;
 }
@@ -194,6 +187,7 @@ h1.xxxlarge,
   font-weight: 500;
 }
 
+
 /* small text */
 
 .small {
@@ -201,16 +195,15 @@ h1.xxxlarge,
   line-height: var(--lineHeight);
 }
 
-/* small text */
 
 .large {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: var(--lineHeight);
 }
 
 .medium {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: var(--lineHeight);
 }
@@ -267,3 +260,38 @@ h6 > a:hover,
   text-decoration: underline rgba(0, 0, 0, 0.3);
   color: inherit;
 }
+
+
+@media (max-width: 1280px) {
+
+    h1.xxxlarge,
+    .h1.xxxlarge {
+      --h1-size: 9rem;
+    }
+
+    h1.xlarge,
+    .h1.xlarge {
+    --h1-size: 3rem;
+    }
+
+ }
+
+
+@media (max-width: 560px) {
+
+    h1.xxxlarge,
+    .h1.xxxlarge {
+      --h1-size: 5rem;
+      line-height: calc(var(--lineHeight) * 4);
+    }
+
+    h1.xlarge,
+    .h1.xlarge {
+    --h1-size: 2.5rem;
+    }
+    .medium {
+        font-size: 1rem;
+      }
+
+
+ }

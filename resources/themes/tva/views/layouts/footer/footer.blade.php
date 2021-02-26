@@ -84,12 +84,9 @@
     @if(core()->getConfigData('customer.settings.newsletter.subscription'))
     <div class="footer-newsletter">
         <div class="newsletter-cta btn-grid btn-grid-primary">
-            {{-- <form action="{{ route('shop.subscribe') }}"> --}}
             <a class="btn-hover" :class="[errors.has('subscriber_email') ? 'has-error' : '']">
-                {{-- <input type="email" class="control subscribe-field" name="subscriber_email" placeholder="Email Address" required><br/> --}}
                 <span class="text">Join our Newsletter</span>
             </a>
-            {{-- </form> --}}
         </div>
     </div>
     @endif
@@ -99,17 +96,13 @@
             $serachQuery = 'term='.request()->input('term');
         }
     ?>
-    {{-- Social Media --}}
-    {{-- <div class="footer-social">
-        <p class="social-cta-headline">Connect!</p>
-        <div class="social-inner">
-            <a href="">Facebook</a>
-            <a href="">Instagram</a>
-            <a href="">Pinterest</a>
-        </div>
-    </div> --}}
     {{-- Credentials --}}
     <div class="footer-trade-mark">
-        <p>©2020 all rights reserved</p><p>två studio - ceramics handmade in germany</p>
+        <div class="rights">
+            <p>©2020 all rights reserved</p>
+        </div>
+        <div class="philo">
+            <p>två studio - ceramics handmade in germany</p>
+        </div>
     </div>
 </footer>

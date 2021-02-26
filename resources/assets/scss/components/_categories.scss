@@ -1,9 +1,10 @@
 .categories-heading {
     text-align: center;
     word-break: normal;
+    h1 {
+        margin: 0;
+    }
 }
-
-
 
 .shop-categories {
     display: flex;
@@ -14,7 +15,7 @@
     border-bottom: var(--border);
     .categories-toggle {
         li {
-            font-size: 18px;
+            // font-size: 22px;
             text-transform: uppercase;
             display: inline;
             padding: calc(var(--fontSize) * 0.5);
@@ -43,7 +44,6 @@
         }
         .categories-heading {
            h1 {
-            font-size: 3em;
             margin-bottom: 0;
             padding-bottom: 0;
            }

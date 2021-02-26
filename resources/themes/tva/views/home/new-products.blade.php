@@ -1,8 +1,8 @@
 @if (app('Webkul\Product\Repositories\ProductRepository')->getNewProducts()->count())
 <section class="featured-pro">
 
-    <div class="featured-heading">
-        <h2 class="display">Winter 2021</h2>
+    <div class="featured-heading border-t">
+        <h1 class="xlarge">Winter 2021</h2>
         {{-- {{ __('shop::app.home.new-products') }}<br />
         <span class="featured-seperator" style="color:lightgrey;">_____</span> --}}
     </div>

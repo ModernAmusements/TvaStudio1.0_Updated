@@ -2,7 +2,7 @@
 <section class="featured-pro">
 
     <div class="featured-heading">
-        <h2 class="display">Summer 2021</h2>
+        <h1 class="xlarge">Summer 2021</h1>
         {{-- {{ __('shop::app.home.featured-products') }}<br />
 
         <span class="featured-seperator" style="color:lightgrey;">_____</span> --}}

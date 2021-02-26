@@ -6,7 +6,7 @@
         {{-- <div class="dropdown-toggle cart btn-grid btn-grid-black"> --}}
             <div class="cart-toggle btn-grid btn-grid-black">
             {{-- Cart Toggle + Counter --}}
-            <span class="name">
+            <span class="btn-hover name">
                 {{ ('Warenkorb') }}
                 <span class="count"> ({{ $cart->items->count() }})</span>
             </span>
@@ -151,11 +151,11 @@
                         @endforeach
 
                         <div class="mini-cart-cta">
-                            <div class="cart-more btn-grid border-b btn-grid-secondary">
+                            <div class="cart-more btn-grid border-b btn-grid-primary">
                                 <a class="btn-hover"
                                     href="{{ route('shop.checkout.cart.index') }}">{{ __('shop::app.minicart.view-cart') }}</a>
                             </div>
-                            <div class="cart-continue btn-grid btn-grid-white">
+                            <div class="cart-continue btn-grid btn-grid-black">
                                 <a class="btn-hover"
                                     href="{{ route('shop.checkout.onepage.index') }}">{{ __('shop::app.minicart.checkout') }}</a>
                             </div>
