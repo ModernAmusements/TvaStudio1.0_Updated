@@ -6,8 +6,8 @@ footer {
     background: var(--background-color);
     z-index: 2;
     position: relative;
-    // left: 0;
-    // bottom: 0;
+    bottom: 0;
+    left: 0;
     a:not(.btn-hover),
     p {
         padding: 11px 18px;
@@ -30,7 +30,7 @@ footer {
             display: grid;
             border-top: var(--border);
             border-bottom: var(--border);
-            min-height: 49px;
+            min-height: 47px;
         }
     }
 

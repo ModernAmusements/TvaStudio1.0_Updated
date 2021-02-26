@@ -3,10 +3,10 @@
     width: 100%;
     background: inherit;
     display: flex;
-    height: 110vh;
-    margin-bottom: 95px;
+    height: 100%;
     .col-left {
         width: 50%;
+        height: 100vh;
         overflow: visible;
         top: 0;
         border-right: var(--border);
@@ -43,6 +43,7 @@
     }
     .col-right {
         width: 50%;
+        height: 100vh;
         z-index: 100;
         display: flex;
         z-index: 1;
@@ -230,4 +231,20 @@
     }
 
 }
+}
+
+
+
+
+
+
+@media (max-width: 400px) {
+
+    .container-fluid {
+
+        height: 100%;
+
+        }
+
+
 }

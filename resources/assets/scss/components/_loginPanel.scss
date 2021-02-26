@@ -16,6 +16,7 @@
 }
 
 .nav-menu {
+    width: 100%;
     li {
         a {
             display: block;
@@ -214,7 +215,7 @@
             }
             .menu-heading {
                 place-content: flex-start;
-                margin-left: 30px;
+                padding-left: 15px;
             }
         }
         .login-heading-registered {
@@ -272,15 +273,19 @@
         p.paragraph {
         }
         .login-heading {
+            border-left: none;
         }
         .login-content {
+            border-left: none;
         }
         .login-heading-registered,
         .login-heading-sign-up {
         }
         .login-heading-sign-up {
+            border-left: none;
         }
         .register-area  {
+            border-top: none;
         }
         .nav-menu {
         }
