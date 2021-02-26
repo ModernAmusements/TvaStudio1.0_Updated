@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Bagisto'),
+    'name' => env('APP_NAME', 'Tva'),
 
     /*
     |--------------------------------------------------------------------------
@@ -116,7 +116,7 @@ return [
     | Here you may specify the base currency code for your application.
     |
     */
-    
+
     'currency' => env('APP_CURRENCY', 'USD'),
 
     /*

@@ -77,7 +77,7 @@
     </script>
     {{-- JSCRIPT --}}
     <script type="text/javascript" src="{{ bagisto_asset('js/shop.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vendor/webkul/ui/assets/js/ui.js') }}"></script>
+    <script type="text/javascript" src="{{ bagisto_asset('js/ui.js') }}"></script>
     <script type="text/javascript" src="{{ bagisto_asset('js/mainApp.js') }}"></script>
 
 

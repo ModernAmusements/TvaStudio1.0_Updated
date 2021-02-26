@@ -13,7 +13,9 @@ class CustomerCest
 
         $I->amOnPage('/');
 
-        $I->click('Profile');
+        $I->click('Menü');
+
+        $I->click('Account');
 
         $I->click('Edit');
 
@@ -42,7 +44,9 @@ class CustomerCest
 
         $I->amOnPage('/');
 
-        $I->click('Profile');
+        $I->click('Menü');
+
+        $I->click('Account');
 
         $I->click('Address');
 
