@@ -32,10 +32,10 @@ jobs:
       - name: Set environment
         run: |
           set -e
-          sed -i "s|^\(DB_HOST=\s*\).*$|\1127.0.0.1|" .env.testing
-          sed -i "s|^\(DB_PORT=\s*\).*$|\1${{ job.services.mysql.ports['3306'] }}|" .env.testing
-          printf "the complete .env.testing ...\n\n"
-          cat .env.testing
+          sed -i "s|^\(DB_HOST=\s*\).*$|\1127.0.0.1|" .env.example
+          sed -i "s|^\(DB_PORT=\s*\).*$|\1${{ job.services.mysql.ports['3306'] }}|" .env.example
+          printf "the complete .env.example ...\n\n"
+          cat .env.example
 
       - name: Composer install
         run: |
@@ -43,7 +43,7 @@ jobs:
           composer install --no-interaction --ansi --no-progress --no-suggest --optimize-autoloader
 
       - name: Migrate database
-        run: set -e && php artisan migrate --env=testing
+        run: set -e && php artisan migrate --env=example
 
       - name: Persist test artifacts
         uses: actions/upload-artifact@v1

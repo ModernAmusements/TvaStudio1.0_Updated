@@ -222,7 +222,8 @@
     <!-- Nav-Mobile Burger  -->
     <div id="menu-mobile" class="nav-bar-mobile">
         <div class="burger">
-            <div></div>
+            <div>
+            </div>
         </div>
     </div>
     <!-- Cart bar -->
