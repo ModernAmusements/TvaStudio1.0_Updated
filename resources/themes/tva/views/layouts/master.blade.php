@@ -58,6 +58,12 @@
             const currentlyAdded  = document.getElementById('currentlyAdded');
              currentlyAdded.style.opacity='1';
              currentlyAdded.style.left='0';
+             setTimeout(function() {
+                currentlyAdded.style.opacity='0';
+            }, 4000);
+            setTimeout(function() {
+                currentlyAdded.style.display='none';
+            }, 5000);
 
         @elseif ($warning = session('warning'))
             window.flashMessages = [{'type': 'alert-warning', 'message': "{{ $warning }}" }];

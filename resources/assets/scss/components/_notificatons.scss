@@ -13,7 +13,7 @@
         padding: 15px;
         display: inline-block;
         position: absolute;
-        animation: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+        animation: all 9s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
         border-left: var(--border);
         border-bottom: var(--border);
         p {
@@ -28,7 +28,7 @@
 @media (max-width: 736px) {
     .alert-wrapper {
         width: 100%;
-        top: 92px;
+        top: 46px;
         right: 0;
         position: fixed;
         z-index: 100;

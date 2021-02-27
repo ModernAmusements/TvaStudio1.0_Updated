@@ -53,7 +53,7 @@ footer {
         .footer-newsletter-panel.is-open {
             grid-column: 1 / 5;
             grid-row: 1;
-            bottom: 139px;
+            bottom: 137px;
             left: 0;
             border-radius: 2em 2em 0 0;
         }
@@ -72,17 +72,24 @@ footer {
             grid-column: 1 / 5;
             border-bottom: var(--border);
             grid-row: 4;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
         }
 
     }
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
     footer {
         .footer-trade-mark {
             flex-direction: column;
         }
+        .footer-newsletter-panel.is-open {
+            bottom: 180px;
+        }
     }
 
 }
+

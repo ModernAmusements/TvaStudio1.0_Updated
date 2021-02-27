@@ -12,7 +12,7 @@
     z-index: 20;
     background: var(--tva-secondary);
     width: 100%;
-    bottom: 92px;
+    bottom: 90px;
     left: -1px;
     position: absolute;
     .control-group {
@@ -21,8 +21,13 @@
         }
     }
 }
+.control-group-radio {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
 .newsletter-heading {
-    margin-top: 215px;
+    margin-top: 150px;
     p {
         padding: 0;
     }
@@ -33,7 +38,10 @@
 .newsletter-subheading,
 .newsletter-info {
     padding: 1em;
+    text-align: center;
 }
+
+
 @media (max-width: 1120px) {
     .newsletter-heading {
         margin-top: 1em;

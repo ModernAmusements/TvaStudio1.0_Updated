@@ -27,7 +27,7 @@
 </head>
 <body @if (core()->getCurrentLocale()->direction == 'rtl') class="rtl" @endif>
       {{-- Nav --}}
-      @include('shop::layouts.header.indexBreadCrumb')
+      @include('shop::layouts.header.indexSignUp')
         {{-- Vue + Main App--}}
     <div id="app">
         <flash-wrapper ref='flashes'>
@@ -41,7 +41,7 @@
         {{-- FOOTER --}}
         @include('shop::layouts.footer.footer')
     </div>
-    {{-- flashMessages --}}
+ {{-- flashMessages --}}
     <script type="text/javascript">
 
         window.flashMessages = [];
@@ -51,8 +51,14 @@
 
         @elseif ($addToCart = session('addToCart'))
             const currentlyAdded  = document.getElementById('currentlyAdded');
-                currentlyAdded.style.opacity='1';
-                currentlyAdded.style.left='0';
+             currentlyAdded.style.opacity='1';
+             currentlyAdded.style.left='0';
+             setTimeout(function() {
+                currentlyAdded.style.opacity='0';
+            }, 4000);
+            setTimeout(function() {
+                currentlyAdded.style.display='none';
+            }, 5000);
 
         @elseif ($warning = session('warning'))
             window.flashMessages = [{'type': 'alert-warning', 'message': "{{ $warning }}" }];

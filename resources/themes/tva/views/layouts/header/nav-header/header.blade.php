@@ -105,15 +105,15 @@
          </div>
         <div class="login-heading-registered">
             <div class="login-heading">Already registered?</div>
-            <div class="login-content">
-                <p class="paragraph">If you are already registered, please log in.</p>
-                <ul class="paragraph">
+            <div class="login-content medium">
+                <p>If you are already registered, please log in.</p>
+                <ul>
                     <li class="">- Manage Cart</li>
                     <li class="">- Orders</li>
                     <li class="">- Wishlist</li>
                 </ul>
             </div>
-            <div class="signup-area border-b border-t btn-grid btn-grid-neutral btn-grid-large">
+            <div class="signup-area border-b  border-t btn-grid btn-grid-primary btn-grid-large">
                 <a class="btn-hover btn-x-large" href="{{ route('customer.session.index') }}">
                     <span class="text"> {{ __('shop::app.header.sign-in') }}</span>
                 </a>
@@ -121,15 +121,15 @@
         </div>
     <div class="login-heading-sign-up">
         <div class="login-heading">Not yet registered!</div>
-        <div class="login-content">
-            <p class="paragraph">If you are already registered, please log in.</p>
-            <ul class="paragraph">
+        <div class="login-content medium">
+            <p>If you are already registered, please log in.</p>
+            <ul>
                 <li class="">- Order updates</li>
                 <li class="">- Personalized</li>
                 <li class="">- Save items</li>
             </ul>
         </div>
-        <div class="login-area border-b border-l border-t btn-grid btn-grid-neutral btn-grid-large">
+        <div class="login-area  border-t btn-grid btn-grid-primary btn-grid-large">
             <a class="btn-hover" href="{{ route('customer.register.index') }}">
                 <span class="text">{{ __('shop::app.header.sign-up') }}</span>
             </a>
@@ -228,54 +228,3 @@
     <!-- Cart bar -->
     <!-- ENTKOPPELT -->
 </header>
-<!-- Header CATS -->
-{{-- <div class="header-bottom shop-categories" id="header-bottom">
-    <div class="categories-heading">
-        <h1 class="single-line xlarge">@yield('page_title')</h1>
-    </div>
-    @include('shop::layouts.header.nav-menu.navmenu')
-</div> --}}
-@push('scripts')
-<script>
- $(document).ready(function() {
-    $('body').delegate('.twa-login-toggle, .cart-panel, .nav-bar-mobile, .cart-toggle, #currentlyAdded, #header-bottom, .footer-newsletter, #menu-mobile', 'click', function(e) {
-        toggleDropdown(e);
-    });
-    function toggleDropdown(e) {
-        var currentElement = $(e.currentTarget);
-        if (currentElement.hasClass('twa-login-toggle')) {
-            currentElement.toggleClass('is-open');
-            $('.twa-login-panel').toggleClass('is-open');
-            $('.cart').removeClass('active');
-            $('#currentlyAdded').css("display", "none");
-            $('#menu-mobile').toggleClass('is-open');
-        }
-        if (currentElement.hasClass('cart-toggle')) {
-            $('.cart-panel').toggleClass('is-open');
-            $('.twa-login-panel').removeClass('is-open');
-            $('.nav-bar-mobile').removeClass('is-open');
-            $('#currentlyAdded').css("display", "none");
-        }
-        if (currentElement.hasClass('nav-bar-mobile')) {
-            currentElement.toggleClass('is-open');
-            $('.twa-login-panel').toggleClass('is-open');
-            $('.cart').removeClass('active');
-        }
-        if (currentElement.hasClass('menu-mobile')) {
-            currentElement.toggleClass('is-open');
-            $('.twa-login-panel').toggleClass('is-open');
-            $('.cart').removeClass('active');
-        }
-        if (currentElement.hasClass('footer-newsletter')) {
-            currentElement.toggleClass('is-open');
-            $('.footer-newsletter-panel').toggleClass('is-open');
-        }
-         if (currentElement.hasClass('header-bottom')) {
-             $('.cart').removeClass('active');
-             $('.twa-login-panel').removeClass('is-open');
-             $('#currentlyAdded').css("display", "none");
-         }
-    }
-    });
-</script>
-@endpush

@@ -64,3 +64,23 @@ Test related Packs
 
 
     
+
+
+
+
+# 
+
+masterSignUp 
+- no succes add to cart 
++ indexSignUp = breadcrumps 
+- index = Nav Menu 
+
+masterBreadCrumps
++ succes add to cart 
++ indexSignUp = breadcrumps 
+- index = Nav Menu 
+
+master
++ succes add to cart 
++ index = Nav Menu 
+- indexSignUp = breadcrumps 

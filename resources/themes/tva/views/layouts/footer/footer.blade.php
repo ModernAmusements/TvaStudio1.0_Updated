@@ -12,10 +12,8 @@
     @if(core()->getConfigData('customer.settings.newsletter.subscription'))
     <div class="footer-newsletter-panel">
             <div class="newsletter-heading">
-                <h2>Sign up for
-                our newsletter
-                </h2>
-                <p>
+                <h2>Sign up forour newsletter</h2>
+                <p class="medium">
                 Are you interested in following along? Let´s stay in touch Big things are in
                 the works. Stay connected to know what's next.
                 </p>
@@ -47,7 +45,10 @@
                     </h4>
                     <div class="control-group-radio">
                         <input type="checkbox" id="clayroom" value="clayroom">
-                        <label for="clayroom" class="checkbox-view">Yes</label>
+                        <label for="clayroom" class="checkbox-view"></label>
+                        <span class="medium">
+                            Yes
+                        </span>
                     </div>
                 </div>
                 <div class="btn-grid form-grid btn-grid-secondary">
@@ -97,7 +98,7 @@
         }
     ?>
     {{-- Credentials --}}
-    <div class="footer-trade-mark">
+    <div class="footer-trade-mark medium">
         <div class="rights">
             <p>©2020 all rights reserved</p>
         </div>

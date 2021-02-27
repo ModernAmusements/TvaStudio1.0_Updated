@@ -17,24 +17,21 @@
                         <div class="dropdown-content cart-item">
                             @foreach ($items as $item)
                             @if($loop->last)
-                            <div class="cart-content">
+                            <div class="cart-content-added">
                                 <div class="cart-content-img">
                                     @php $images = $item->product->getTypeInstance()->getBaseImage($item);
                                     @endphp
                                     <img src="{{ $images['small_image_url'] }}" />
                                 </div>
                                 <div class="cart-content-info">
-                                    {!! view_render_event('bagisto.shop.checkout.cart-mini.item.name.before', ['item' =>
-                                    $item]) !!}
-                                    <div class="title">
+
+                                    <div class="title large">
                                         You have added <strong>{{ $item->name }}</strong> to the cart!
                                     </div>
-                                    {!! view_render_event('bagisto.shop.checkout.cart-mini.item.name.after', ['item' =>
-                                    $item]) !!}
+
                                     {{-- Atts --}}
-                                    {!! view_render_event('bagisto.shop.checkout.cart-mini.item.options.before', ['item' =>
-                                    $item])
-                                    !!} @if (isset($item->additional['attributes']))
+
+                                    @if (isset($item->additional['attributes']))
                                     <div class="item-options">
                                         @foreach ($item->additional['attributes'] as $attribute)
                                         <b>{{ $attribute['attribute_name'] }} : </b>{{ $attribute['option_label'] }}</br>
@@ -42,42 +39,25 @@
                                     </div>
                                     @endif
                                     {{-- Atts --}}
-
-                                    {!! view_render_event('bagisto.shop.checkout.cart-mini.item.options.after',
-                                    ['item' =>
-                                    $item]) !!} {!! view_render_event('bagisto.shop.checkout.cart-mini.item.price.before',
-                                    ['item'
-                                    => $item]) !!}
                                     <div class="price">
                                         <strong>{{ core()->currency($item->base_total) }}
                                         </strong>
                                     </div>
-                                    {!! view_render_event('bagisto.shop.checkout.cart-mini.item.price.after', ['item' =>
-                                    $item]) !!}
-                                    {!! view_render_event('bagisto.shop.checkout.cart-mini.item.quantity.before', ['item' =>
-                                    $item])
-                                    !!}
-                                    {{-- <div class="quantity">Quantity: {{ $item->quantity }}
-                                    </div> --}}
-                                    {!! view_render_event('bagisto.shop.checkout.cart-mini.item.quantity.after', ['item' =>
-                                    $item])
-                                    !!}
                                 </div>
                             </div>
                             @endif
                             @endforeach
-                        </div>
-                        <div class="currentlyAdded-btn">
-                            <div class="cart-more border-t btn-grid btn-grid-secondary">
-                                <a class="btn-hover"
-                                    href="{{ route('shop.checkout.cart.index') }}">{{ __('shop::app.minicart.view-cart') }}</a>
+                            <div class="currentlyAdded-btn">
+                                <div class="cart-more  btn-grid btn-grid-primary">
+                                    <a class="btn-hover"
+                                        href="{{ route('shop.checkout.cart.index') }}">{{ __('shop::app.minicart.view-cart') }}</a>
+                                </div>
+                                <div class="cart-continue border-t  btn-grid btn-grid-black">
+                                    <a class="btn-hover"
+                                        href="{{ route('shop.checkout.onepage.index') }}">{{ __('shop::app.minicart.checkout') }}</a>
+                                </div>
                             </div>
-                            <div class="cart-continue border-t border-b btn-grid btn-grid-white">
-                                <a class="btn-hover"
-                                    href="{{ route('shop.checkout.onepage.index') }}">{{ __('shop::app.minicart.checkout') }}</a>
-                            </div>
                         </div>
-
                     </div>
 
             </div>
@@ -95,7 +75,7 @@
                                <h2>Warenkorb</h2>
                           </div>
                         </div>
-                        <div class="cart-legend">
+                        <div class="cart-legend medium">
                             <div class="cart-legend-image">
                                 Abbildung
                             </div>
@@ -116,7 +96,7 @@
                                 @endphp
                                 <img src="{{ $images['small_image_url'] }}" />
                             </div>
-                            <div class="cart-content-info">
+                            <div class="cart-content-info medium">
 
                                 <div class="title">
                                     <h3>{{ $item->name }}</h3>
@@ -134,18 +114,16 @@
                                 {{-- Atts --}}
 
 
-                                <div class="quantitys">Quantity: {{ $item->quantity }}
-                                </div>
-
-
-                                <div class="price">
-                                    <p>{{ core()->currency($item->base_total) }}
+                                <div class="quantitys">
+                                    <p>
+                                    Quantity: {{ $item->quantity }}
                                     </p>
                                 </div>
-
-
-
-
+                                <div class="price">
+                                    <p>
+                                    {{ core()->currency($item->base_total) }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         @endforeach
@@ -160,7 +138,7 @@
                                     href="{{ route('shop.checkout.onepage.index') }}">{{ __('shop::app.minicart.checkout') }}</a>
                             </div>
                         </div>
-                        <div class="cart-header">
+                        <div class="cart-header medium">
                             <p class="cart-total">
                                 {{ __('shop::app.checkout.cart.cart-subtotal') }}
                                 <b class="cart-total-price">{{ core()->currency($cart->base_sub_total) }}

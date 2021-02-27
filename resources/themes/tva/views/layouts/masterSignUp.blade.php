@@ -45,8 +45,6 @@
     <script type="text/javascript">
         window.flashMessages = [];
         @if ($success = session('success'))
-        // const currentlyAdded  = document.getElementById('currentlyAdded');
-        //     currentlyAdded.style.display='block';
             window.flashMessages = [{'type': 'alert-success', 'message': "{{ $success }}" }];
         @elseif ($warning = session('warning'))
             window.flashMessages = [{'type': 'alert-warning', 'message': "{{ $warning }}" }];
