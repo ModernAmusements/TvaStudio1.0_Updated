@@ -72,6 +72,7 @@ class OrderCest
             'customer_id'  => $mocks['customer']->id,
         ]));
 
+
         $I->seeRecord(CartAddress::class, array_merge($addressData, [
             'address_type' => 'billing',
             'cart_id'      => $mocks['cart']->id,

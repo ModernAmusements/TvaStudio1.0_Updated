@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "test": "php vendor/bin/codecept run functional Shop && php vendor/bin/codecept run functional CartRule && php vendor/bin/codecept run functional Customer && php vendor/bin/codecept run trigger && php vendor/bin/codecept run unit Checkout",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",

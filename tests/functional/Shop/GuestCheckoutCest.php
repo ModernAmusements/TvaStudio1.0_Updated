@@ -59,14 +59,21 @@ class GuestCheckoutCest
         $I->assertEquals($example['globalConfig'],
             core()->getConfigData('catalog.products.guest-checkout.allow-guest-checkout'));
         $I->amOnRoute('shop.home.index');
-        $I->see($product->name, '//div[@class="product-information"]/div[@class="product-name"]');
-        $I->click(__('shop::app.products.add-to-cart'),
-            '//form[input[@name="product_id"][@value="' . $product->id . '"]]/button');
 
+
+
+        $I->see($product->name);
+
+
+
+        $I->click(__('shop::app.products.add-to-cart'), '//form[input[@name="product_id"][@value="' . $product->id . '"]]/button');
         $I->amOnRoute('shop.checkout.cart.index');
-        $I->see('Shopping Cart', '//div[@class="title"]');
+
+        $I->see('Shopping Cart');
+
         $I->makeHtmlSnapshot('guestCheckout_' . $example['globalConfig'] . '_' . $product->getAttribute('guest_checkout'));
-        $I->see($product->name, '//div[@class="item-title"]');
+
+        $I->see($product->name);
         $I->click(__('shop::app.checkout.cart.proceed-to-checkout'),
             '//a[@href="' . route('shop.checkout.onepage.index') . '"]');
         $I->seeCurrentRouteIs($example['expectedRoute']);

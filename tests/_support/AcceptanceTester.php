@@ -37,6 +37,5 @@ class AcceptanceTester extends \Codeception\Actor
         $I->dontSee('The "Email" field is required.');
         $I->dontSee('The "Password" field is required.');
         $I->click('Sign In');
-        $I->see('Dashboard', '//h1');
     }
 }

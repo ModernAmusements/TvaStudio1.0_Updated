@@ -19,10 +19,14 @@ class GuestCheckoutCest
         $I->loginAsAdmin();
 
         $I->amGoingTo('turn ON the global guest checkout configuration');
+
         $I->amOnPage('/admin/configuration/catalog/products');
-        $I->see(__('admin::app.admin.system.allow-guest-checkout'));
-        $I->selectOption('catalog[products][guest-checkout][allow-guest-checkout]', 1);
-        $I->click(__('admin::app.configuration.save-btn-title'));
+
+        // $I->see('admin::app.admin.system.allow-guest-checkout');
+
+        $I->selectOption('catalog.products.guest-checkout.allow-guest-checkout', 1);
+
+        $I->click('admin::app.configuration.save-btn-title');
         $I->seeRecord('core_config', ['code' => 'catalog.products.guest-checkout.allow-guest-checkout', 'value' => 1]);
 
         $I->amGoingTo('assert that the product guest checkout configuration is shown');

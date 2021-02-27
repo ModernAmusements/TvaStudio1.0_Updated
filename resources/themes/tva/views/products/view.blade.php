@@ -20,7 +20,7 @@
             <div class="product-subpage-information">
 
                 <div class="product-heading">
-                    <h1>{{ $product->name }}</h1>
+                    <h1 class="xlarge">{{ $product->name }}</h1>
                 </div>
 
                 @include ('shop::products.view.attributes')
@@ -31,12 +31,12 @@
 
                 @include ('shop::products.view.stock', ['product' => $product])
 
-                <div class="description">
+                <div class="description medium">
                     <strong>Details:</strong>
                     {!! $product->short_description !!}
                 </div>
 
-                <div class="full-description">
+                <div class="full-description medium">
                     {!! $product->description !!}
                 </div>
             {{-- @include ('shop::products.view.reviews') --}}

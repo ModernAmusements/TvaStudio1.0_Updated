@@ -50,9 +50,9 @@
                 {!! view_render_event('bagisto.shop.customers.login_form_controls.after') !!}
 
                 <div class="forgot-password-link">
-                    <a href="{{ route('customer.forgot-password.create') }}">{{ __('shop::app.customer.login-form.forgot_pass') }}</a>
+                    <a class="left" href="{{ route('customer.forgot-password.create') }}">{{ __('shop::app.customer.login-form.forgot_pass') }}</a>
 
-                    <div class="mt-10">
+                    <div>
                         @if (Cookie::has('enable-resend'))
                             @if (Cookie::get('enable-resend') == true)
                                 <a href="{{ route('customer.resend.verification-email', Cookie::get('email-for-resend')) }}">{{ __('shop::app.customer.login-form.resend-verification') }}</a>

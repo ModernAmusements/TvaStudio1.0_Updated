@@ -52,9 +52,9 @@ pre tt {
   word-wrap: normal;
 }
 
-p {
-  margin-bottom: calc(var(--lineHeight) * 0.5);
-}
+// p {
+//   margin-bottom: calc(var(--lineHeight) * 0.5);
+// }
 
 .paragraph {
   font-size: 16px;
@@ -134,7 +134,7 @@ h4,
 }
 
 .thin {
-  font-weight: 300;
+  font-weight: 300!important;
 }
 
 h3.single-line,
@@ -197,7 +197,7 @@ h1.xxxlarge,
 
 
 .large {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: var(--lineHeight);
 }
@@ -275,7 +275,7 @@ h6 > a:hover,
     }
 
     .large {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
  }
@@ -298,7 +298,7 @@ h6 > a:hover,
     }
 
     .large {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
 

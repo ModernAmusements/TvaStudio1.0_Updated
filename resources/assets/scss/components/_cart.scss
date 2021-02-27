@@ -216,6 +216,9 @@
     .cart-content-info {
         display:flex;
         align-self: center;
+        .title {
+            padding-left: 1em;
+        }
     }
     // .dropdown-cart {
     //     display: grid;

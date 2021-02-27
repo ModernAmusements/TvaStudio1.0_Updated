@@ -10,7 +10,7 @@
         </div> --}}
 
         {{-- <div slot="body"> --}}
-            <div class="full-specifications">
+            <div class="full-specifications medium">
 
                 @foreach ($customAttributeValues as $attribute)
 

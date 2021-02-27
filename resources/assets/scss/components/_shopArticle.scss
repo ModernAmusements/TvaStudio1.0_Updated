@@ -31,7 +31,7 @@
     .price {
         justify-self: end;
         padding: calc(var(--fontSize) * 0.5);
-        h3 {
+        h1 {
             margin: 0;
         }
         .regular-price {
@@ -44,7 +44,7 @@
     }
     .description {
         padding: calc(var(--fontSize) * 0.5);
-        h3 {
+        h1 {
             margin: 0;
         }
     }

@@ -37,18 +37,23 @@ important .yml files !!
 
 Run Test 
 
-php vendor/bin/codecept run acceptance
 
 php vendor/bin/codecept run unit
 
-php vendor/bin/codecept run unit Checkout
 
-php vendor/bin/codecept run functional Checkout
-
-php vendor/bin/codecept run functional Customer
-
+> php vendor/bin/codecept run unit Checkout
+> php vendor/bin/codecept run trigger
+> php vendor/bin/codecept run functional Customer
+> php vendor/bin/codecept run functional Shop
+> php vendor/bin/codecept run functional CartRule
+<> php vendor/bin/codecept run functional Admin
+<> php vendor/bin/codecept run functional Checkout
+<> php vendor/bin/codecept run acceptance
+<> php vendor/bin/codecept run unit
 
 Test related Packs 
+
+
 
 --------------------------
 

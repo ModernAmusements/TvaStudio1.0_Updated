@@ -238,6 +238,9 @@ header {
     .breadcrumb {
         display: flex;
         flex-direction: row;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: var(--lineHeight);
         li {
             display: block;
             opacity: 0.5;
