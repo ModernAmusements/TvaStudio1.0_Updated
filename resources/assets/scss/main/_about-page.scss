@@ -5,7 +5,7 @@
     display: flex;
     height: 100%;
     .col-left {
-        width: 50%;
+        width: 49.9%;
         height: 100vh;
         overflow: visible;
         top: 0;
@@ -22,10 +22,17 @@
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
+            border-bottom: var(--border);
+            p {
+                padding-bottom: 1em;
+            }
         }
         .about-nav {
             display: flex;
             flex-direction: column;
+            h3 {
+                margin:0;
+            }
         }
         .box {
             box-sizing: border-box;
@@ -42,7 +49,7 @@
         }
     }
     .col-right {
-        width: 50%;
+        width: 50.1%;
         height: 100vh;
         z-index: 100;
         display: flex;
@@ -50,7 +57,7 @@
         .main-about {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             flex-direction: column;
             width: 100%;
             .about-heading{
@@ -88,7 +95,7 @@
         transition: all 0.2s;
         border: none;
         text-indent: -99999px;
-        background: url("/themes/tva/assets/images/close_old.svg");
+        background: url("/themes/tva/assets/images/closeTva.svg");
         cursor: pointer;
     }
     .btn-close:hover {
@@ -97,7 +104,7 @@
     .popup {
         opacity: 1;
         position: fixed;
-        top: 60px;
+        top: 45px;
         bottom: 0;
         overflow: auto;
         border-top: var(--border);
@@ -122,6 +129,7 @@
                 padding: 1em;
                 border-top: 1px solid;
                 cursor: pointer;
+                font-size: 18px;
                 /* Icon */
             }
             .tab-label:hover {
@@ -136,6 +144,7 @@
                 max-height: 0;
                 padding: 0 1em;
                 transition: all 0.35s;
+                font-size: 16px;
             }
             .tab-close {
                 display: flex;
@@ -164,6 +173,7 @@
         .popup-content-text {
             padding: 14px;
             border-top: var(--border);
+            font-size: 18px;
         }
         .singe-line {
             padding: 14px;
@@ -196,7 +206,7 @@
 
 @media (max-width: 900px) {
     .container-fluid {
-        flex-direction: column;
+        flex-direction: column-reverse;
     .col-left,
     .col-right,
     .popup {
@@ -204,7 +214,7 @@
     }
 
     .popup {
-        top: 89px;
+        // top: 89px;
         bottom: -100%;
     }
 
@@ -219,7 +229,7 @@
         position: static;
         height: auto;
         border-right: none;
-        margin-top: 95px;
+        margin-bottom: 95px;
     }
     .col-right {
         .main-about {

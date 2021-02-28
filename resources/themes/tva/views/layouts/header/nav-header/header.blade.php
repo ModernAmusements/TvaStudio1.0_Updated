@@ -22,7 +22,7 @@
             <input type="search" name="term" class="form-sub input-xl" placeholder="{{ ('Suche hier') }}"/>
         </form>
         <svg class="search">
-            <use xlink:href="images/icons/iconsTva.svg#searchIcon"></use>
+            <use xlink:href="/themes/tva/assets/images/iconsTva.svg#searchIcon"></use>
         </svg>
     </div>
     <?php

@@ -7,6 +7,15 @@ php artisan config:clear
 php artisan view:clear
 
 
+
+Server Settings:
+(possible problems: mac os update)
+(if not asked for password = problem!)
+
+Apache 80
+Nginx 80 
+MySQL 3306 
+
 composer self-update --rollback to return to version 1.10.10
 
 updated to composer2.0 
