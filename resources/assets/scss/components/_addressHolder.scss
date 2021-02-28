@@ -6,23 +6,18 @@
     flex-wrap: wrap;
     width: 100%;
 }
-.address-card:first-child {
-    border-top: none;
-}
+
 .address-card {
     width: 100%;
-    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 1em;
     .details {
         .card-info {
             padding: 14px
         }
     }
 }
-.address-card:last-child {
-    border-top: var(--border);
-    border-bottom: var(--border);
 
-}
 .address-card .control-group {
     width: 15px;
     height: 15px;

@@ -5,10 +5,10 @@
         </h1>
     </div>
 
-
     <div class="address-summary">
         @if ($billingAddress = $cart->billing_address)
-            <div class="billing-address">
+
+            <div class="billing-address medium">
                 <div class="card-title">
                     <b>{{ __('shop::app.checkout.onepage.billing-address') }}</b>
                 </div>
@@ -24,7 +24,6 @@
                         <li>
                             {{ core()->country_name($billingAddress->country) }} {{ $billingAddress->postcode }}
                         </li>
-
                         <li>
                             {{ __('shop::app.checkout.onepage.contact') }} : {{ $billingAddress->phone }}
                         </li>
@@ -34,11 +33,10 @@
         @endif
 
         @if ($cart->haveStockableItems() && $shippingAddress = $cart->shipping_address)
-            <div class="shipping-address">
+            <div class="shipping-address medium">
                 <div class="card-title">
                     <b>{{ __('shop::app.checkout.onepage.shipping-address') }}</b>
                 </div>
-
                 <div class="card-content">
                     <ul>
                         <li>
@@ -67,52 +65,38 @@
             @php
                 $productBaseImage = $item->product->getTypeInstance()->getBaseImage($item);
             @endphp
-
             <div class="item-review">
                 <div class="item-image">
                     <img src="{{ $productBaseImage['medium_image_url'] }}" />
                 </div>
-
                 <div class="item-details">
-
-                    {!! view_render_event('bagisto.shop.checkout.name.before', ['item' => $item]) !!}
-
                     <div class="item-title">
-                        <span class="title">
+                        <span class="medium">
                             Name:
                         </span>
-                       <h3>
+                       <h1 class="large">
                             {{ $item->product->name }}
-                        </h3>
+                        </h1>
                     </div>
-
-                    {!! view_render_event('bagisto.shop.checkout.name.after', ['item' => $item]) !!}
-                    {!! view_render_event('bagisto.shop.checkout.price.before', ['item' => $item]) !!}
-
-                    <div class="row">
-                        <span class="title">
+                    <div class="item-price">
+                        <span class="medium">
                             {{ __('shop::app.checkout.onepage.price') }}:
                         </span>
-                        <h4 class=" value">
+                        <h1 class="large">
                             {{ core()->currency($item->base_price) }}
-                        </h4>
+                        </h1>
                     </div>
 
-                    {!! view_render_event('bagisto.shop.checkout.price.after', ['item' => $item]) !!}
-                    {!! view_render_event('bagisto.shop.checkout.quantity.before', ['item' => $item]) !!}
 
-                    <div class="row">
-                        <span class="title">
+                    <div class="item-q">
+                        <span class="medium">
                             {{ __('shop::app.checkout.onepage.quantity') }}:
                         </span>
-                        <h4 class="value">
+                        <h1 class="large">
                             {{ $item->quantity }}
-                        </h4>
+                        </h1>
                     </div>
 
-                    {!! view_render_event('bagisto.shop.checkout.quantity.after', ['item' => $item]) !!}
-
-                    {!! view_render_event('bagisto.shop.checkout.options.before', ['item' => $item]) !!}
 
                     @if (isset($item->additional['attributes']))
                         <div class="item-options">
@@ -124,7 +108,7 @@
                         </div>
                     @endif
 
-                    {!! view_render_event('bagisto.shop.checkout.options.after', ['item' => $item]) !!}
+
                 </div>
             </div>
         @endforeach
@@ -136,12 +120,11 @@
                 <div class="shipping">
 
                     <div class="form-header">
-                        <h4 class="checkout-step-heading">
+                        <h1 class="large checkout-step-heading">
                             Shipping
-                        </h4>
+                        </h1>
                     </div>
-
-                    <div class="text">
+                    <div class="text medium">
                         {{ core()->currency($cart->selected_shipping_rate->base_price) }}
 
                         <div class="info">
@@ -154,12 +137,12 @@
             <div class="payment">
 
                 <div class="form-header">
-                    <h4 class="checkout-step-heading">
+                    <h1 class="large checkout-step-heading">
                         Payment
-                    </h4>
+                    </h1>
                 </div>
 
-                <div class="text">
+                <div class="text medium">
                     {{ core()->getConfigData('sales.paymentmethods.' . $cart->payment->method . '.title') }}
                 </div>
             </div>

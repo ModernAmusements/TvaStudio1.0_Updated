@@ -55,11 +55,8 @@
     <script type="text/x-template" id="filter-attribute-item-template">
         <div class="filter-attributes-item" :class="[active ? 'active' : '']">
         <div class="filter-container">
-            <div class="filter-attributes-title" @click="active = !active">
+            <div class="filter-attributes-title medium" @click="active = !active">
                <span class=""> @{{ attribute.name ? attribute.name : attribute.admin_name }}</span>
-               <span class="filter-arrow">
-                <i class="icon accordian-down-icon"></i>
-                </span>
                 <div class="pull-right">
                     <a class="left small" v-if="appliedFilters.length" @click.stop="clearFilters()">
                         {{ ('clear filter') }}
@@ -68,7 +65,7 @@
             </div>
         </div>
 
-            <div class="filter-attributes-content">
+            <div class="filter-attributes-content medium">
                 <div class="items" v-if="attribute.type != 'price'">
                     <div class="filter-items"
                          v-for='(option, index) in attribute.options'>

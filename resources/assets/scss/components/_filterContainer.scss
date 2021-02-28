@@ -23,8 +23,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 49px;
         grid-row: 1;
-        color: var(--foreground-color);
-        background: var(--tva-secondary);
+        // color: var(--foreground-color);
+        // background: var(--tva-secondary);
         cursor: pointer;
         .filter-attributes-item {
             display: grid;
@@ -35,11 +35,9 @@
                 display: flex;
                 place-items: center;
                 justify-content: space-between;
-                .filter-arrow {
-                    top: 14px;
-                    position: absolute;
-                    right: 0px;
-                }
+            }
+            .pull-right {
+
             }
             .filter-container {
                 display: grid;
@@ -53,9 +51,9 @@
 
             .filter-attributes-content {
                 border-top: none;
-                z-index: 10;
+                z-index: 1;
                 grid-row: 2;
-                background: var(--list-hover);
+                background: var(--tva-secondary);
                 border-left: var(--border);
                 border-bottom: var(--border);
                 border-right: var(--border);
@@ -90,7 +88,7 @@
 }
 
 .filter-attributes-item.active {
-    background: var(--list-hover);
+     background: var(--tva-secondary);
     .filter-attributes-content {
         display: grid;
         grid-template-columns: 1fr;
@@ -113,22 +111,32 @@
             grid-auto-flow: row;
             .filter-attributes-item {
                 border-left: none;
+                border-bottom: none;
+                .filter-container {
+                    border-bottom: var(--border);
+                }
                 .filter-attributes-content {
-                    border-left: none;
-                    border-bottom: none;
-                    border-right: none;
+                    border: none;
                     .filter-items:first-of-type {
                         border-top: var(--border);
-
                     }
                     .price-range-wrapper {
                         padding: 1em;
                         border-bottom: var(--border);
                     }
                 }
+                .items:first-child {
+                    border-bottom: var(--border);
+                }
             }
         }
+        .filter-attributes-item.active {
+            .filter-container {
+                border-bottom: none;
+            }
+       }
     }
+
 }
 .top-toolbar {
     position: absolute;

@@ -1,7 +1,7 @@
-<div class="order-summary">
+<div class="order-summary medium">
     <div class="summary-titel">
-    <p>{{ __('shop::app.checkout.total.order-summary') }}</p>
-</div>
+        <p>{{ __('shop::app.checkout.total.order-summary') }}</p>
+    </div>
     <div class="item-detail">
         <label>
             {{ intval($cart->items_qty) }}

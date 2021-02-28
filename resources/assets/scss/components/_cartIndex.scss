@@ -69,6 +69,9 @@
             justify-content: flex-start;
             width: 100%;
             .item-title {
+                h1 {
+                    margin: 0;
+                }
                 border-bottom: var(--border);
                 height: 50px;
                 padding: 14px;

@@ -24,7 +24,7 @@
                 <div class="left-side">
 
 
-                    <ul class="checkout-steps">
+                    <ul class="checkout-steps medium">
                         <li class="active" :class="[completed_step >= 0 ? 'active' : '', completed_step > 0 ? 'completed' : '']" @click="navigateToStep(1)">
                             <span>{{ __('shop::app.checkout.onepage.information') }}</span>
                         </li>

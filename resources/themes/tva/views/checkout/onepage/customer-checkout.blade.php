@@ -1,8 +1,7 @@
 <div v-if="is_customer_exist">
     <div class="control-group" id="password">
         <label for="password">{{ __('shop::app.checkout.onepage.password') }}</label>
-
-        <input type="password" class="control" id="password" name="password" v-model="address.billing.password"/>
+        <input type="password" class="control form-control subscribe-field form-sub" id="password" name="password" v-model="address.billing.password"/>
     </div>
 
     <div class="control-group" id="login-and-forgot-btn">
@@ -15,9 +14,10 @@
                 @endif
             </div>
         </div>
-
-        <button type='button' id="" class="btn btn-primary btn-lg btn-login" @click="loginCustomer">
-            {{ __('shop::app.customer.login-form.button_title') }}
-        </button>
+        <div class="btn-grid border-t btn-grid-primary">
+            <button type='button' id="" class="btn-hover" @click="loginCustomer">
+                {{ __('shop::app.customer.login-form.button_title') }}
+            </button>
+        </div>
     </div>
 </div>

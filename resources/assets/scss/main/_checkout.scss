@@ -64,14 +64,15 @@
             }
         }
     }
+
+
     .order-summary {
         border-bottom: var(--border);
     }
     .control-group {
         border-top: var(--border);
         position: relative;
-        label {
-            font-size: 14px;
+        label:not(.checkbox-view) {
             border-bottom: var(--border);
             width: 100%;
             display: flex;
@@ -80,6 +81,17 @@
         input {
             height: 49px;
         }
+        .checkbox-view {
+            span {
+                margin-top: 8px;
+                margin-left: -10px;
+            }
+        }
+    }
+    .control-group:nth-child(12) {
+        input {
+            border-bottom: var(--border);
+        }
     }
     .control-group:last-child {
         label {
@@ -87,14 +99,14 @@
             border-bottom: none;
         }
     }
-    .address-card {
-        padding: 1em;
+    .checkout-toggle{
+        padding: 8px;
+        padding-bottom: 4px;
+        border-top: none;
     }
     .checkout-address-content {
         display: flex;
-        .address-card-list  {
-            font-size: 16px;
-        }
+
     }
     .shipping-methods,
     .payment-methods {
@@ -111,16 +123,18 @@
                 border-bottom: var(--border);
                 .method-content {
                     padding: 1em;
+                    display: block;
                 }
             }
             .method:last-child {
                 border-bottom: none;
             }
         }
-
         .method-summary {
-            margin-left: 35px;
+            margin-left: 46px;
+            margin-top: -6px;
         }
+
     }
     .address-summary {
         display: flex;
@@ -147,13 +161,23 @@
             justify-content: flex-start;
             width: 100%;
             padding: 1em;
+            .item-title,
+            .item-price,
+            .item-q {
+                display: flex;
+                align-items: baseline;
+                h1{
+                    margin: 0;
+                    margin-left: 5px;
+                }
+            }
         }
     }
     .order-description {
         display: flex;
-        flex-direction: column;
         .shipping {
-            border-bottom: var(--border);
+            border-right: var(--border);
+            width: 50%;
             .text {
                 padding: 1em;
             }
@@ -190,5 +214,17 @@
                 margin-left: 0px;
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    #checkout {
+    .item-review {
+        flex-direction: column;
+        .item-image {
+            border-right: none;
+            border-bottom: var(--border);
+        }
+    }
     }
 }
