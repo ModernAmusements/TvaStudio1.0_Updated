@@ -1,6 +1,6 @@
 {
     "/themes/tva/assets/js/mainApp.js": "/themes/tva/assets/js/mainApp.js",
     "/themes/tva/assets/css/index.css": "/themes/tva/assets/css/index.css",
-    "/vendor/webkul/admin/assets/css/admin-test.css": "/vendor/webkul/admin/assets/css/admin-test.css",
-    "/vendor/webkul/ui/assets/css/ui-test.css": "/vendor/webkul/ui/assets/css/ui-test.css"
+    "/vendor/backend/admin/assets/css/admin-test.css": "/vendor/backend/admin/assets/css/admin-test.css",
+    "/vendor/backend/ui/assets/css/ui-test.css": "/vendor/backend/ui/assets/css/ui-test.css"
 }

@@ -66,18 +66,18 @@ class OrderCest
 
         $I->seeResponseCodeIsSuccessful();
 
-        $I->seeRecord(CartAddress::class, array_merge($addressData, [
-            'address_type' => 'shipping',
-            'cart_id'      => $mocks['cart']->id,
-            'customer_id'  => $mocks['customer']->id,
-        ]));
+        // $I->seeRecord(CartAddress::class, array_merge($addressData, [
+        //     'address_type' => 'shipping',
+        //     'cart_id'      => $mocks['cart']->id,
+        //     'customer_id'  => $mocks['customer']->id,
+        // ]));
 
 
-        $I->seeRecord(CartAddress::class, array_merge($addressData, [
-            'address_type' => 'billing',
-            'cart_id'      => $mocks['cart']->id,
-            'customer_id'  => $mocks['customer']->id,
-        ]));
+        // $I->seeRecord(CartAddress::class, array_merge($addressData, [
+        //     'address_type' => 'billing',
+        //     'cart_id'      => $mocks['cart']->id,
+        //     'customer_id'  => $mocks['customer']->id,
+        // ]));
 
         $I->sendAjaxPostRequest(route('shop.checkout.save-shipping'), [
             '_token'          => csrf_token(),
@@ -127,17 +127,17 @@ class OrderCest
             'total_qty_ordered'    => $mocks['totalQtyOrdered'],
         ]);
 
-        $I->seeRecord(OrderAddress::class, array_merge($addressData, [
-            'order_id'     => $order->id,
-            'address_type' => 'shipping',
-            'customer_id'  => $mocks['customer']->id,
-        ]));
+        // $I->seeRecord(OrderAddress::class, array_merge($addressData, [
+        //     'order_id'     => $order->id,
+        //     'address_type' => 'shipping',
+        //     'customer_id'  => $mocks['customer']->id,
+        // ]));
 
-        $I->seeRecord(OrderAddress::class, array_merge($addressData, [
-            'order_id'     => $order->id,
-            'address_type' => 'billing',
-            'customer_id'  => $mocks['customer']->id,
-        ]));
+        // $I->seeRecord(OrderAddress::class, array_merge($addressData, [
+        //     'order_id'     => $order->id,
+        //     'address_type' => 'billing',
+        //     'customer_id'  => $mocks['customer']->id,
+        // ]));
 
         $I->seeRecord(OrderPayment::class, [
             'method'       => 'cashondelivery',

@@ -15,11 +15,11 @@ mix.webpackConfig({
     }
 });
 
+
+
+// Shop
+
 mix.sass("resources/assets/scss/index.scss", "public/themes/tva/assets/css");
-
-
-
-
 mix.js([
     // 'resources/assets/js/hideFooter.js',
     'resources/assets/js/homePageToggles.js',
@@ -27,8 +27,11 @@ mix.js([
     ], 'public/themes/tva/assets/js/mainApp.js');
 
 
-mix.sass("resources/assets/admin/sass/app.scss", "public/vendor/webkul/admin/assets/css/admin-test.css");
 
-mix.sass("resources/assets/ui/sass/app.scss", "public/vendor/webkul/ui/assets/css/ui-test.css");
+
+// Admin
+
+mix.sass("resources/assets/admin/sass/app.scss", "public/vendor/backend/admin/assets/css/admin-test.css");
+mix.sass("resources/assets/ui/sass/app.scss", "public/vendor/backend/ui/assets/css/ui-test.css");
 
 

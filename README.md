@@ -47,7 +47,7 @@ important .yml files !!
 Run Test 
 
 
-php vendor/bin/codecept run unit
+
 
 
 > php vendor/bin/codecept run unit Checkout
@@ -55,8 +55,8 @@ php vendor/bin/codecept run unit
 > php vendor/bin/codecept run functional Customer
 > php vendor/bin/codecept run functional Shop
 > php vendor/bin/codecept run functional CartRule
-<> php vendor/bin/codecept run functional Admin
-<> php vendor/bin/codecept run functional Checkout
+> php vendor/bin/codecept run functional Admin
+> php vendor/bin/codecept run functional Checkout
 <> php vendor/bin/codecept run acceptance
 <> php vendor/bin/codecept run unit
 
@@ -107,3 +107,10 @@ master
 
 // admin css to resourcess assetes admin scsss
 // us css same 
+
+
+removed from config/app.php 
+Webkul\Velocity\Providers\VelocityServiceProvider::class
+
+removed from config/concord.php 
+\Webkul\Velocity\Providers\ModuleServiceProvider::class,

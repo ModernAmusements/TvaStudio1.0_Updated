@@ -1,7 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "test": "php vendor/bin/codecept run functional Shop && php vendor/bin/codecept run functional CartRule && php vendor/bin/codecept run functional Customer && php vendor/bin/codecept run trigger && php vendor/bin/codecept run unit Checkout",
+        "test": "php vendor/bin/codecept run functional Checkout && php vendor/bin/codecept run functional Admin && php vendor/bin/codecept run functional Shop && php vendor/bin/codecept run functional CartRule && php vendor/bin/codecept run functional Customer && php vendor/bin/codecept run trigger && php vendor/bin/codecept run unit Checkout",
+        "clear": "php artisan cache:clear && php artisan route:clear && php artisan config:clear && php artisan view:clear",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
