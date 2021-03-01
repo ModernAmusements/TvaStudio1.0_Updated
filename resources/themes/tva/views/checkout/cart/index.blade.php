@@ -15,69 +15,65 @@
                 <div class="left-side">
                     <form action="{{ route('shop.checkout.cart.update') }}" method="POST" @submit.prevent="onSubmit">
                         <div class="cart-item-list">
-                            @csrf
-                            @foreach ($cart->items as $key => $item)
-                            @php
+                        @csrf
+                        @foreach ($cart->items as $key => $item)
+                        @php
                             $productBaseImage = $item->product->getTypeInstance()->getBaseImage($item);
-                            @endphp
+                        @endphp
 
-                            <div class="item">
+                        <div class="item">
+                            <div class="item-image">
+                                <a href="{{ route('shop.productOrCategory.index', $item->product->url_key) }}">
+                                    <img class="cart-img" src="{{ $productBaseImage['medium_image_url'] }}" />
+                                </a>
+                            </div>
 
-                                <div class="item-image">
+                            <div class="item-details">
+                                <div class="item-title">
                                     <a href="{{ route('shop.productOrCategory.index', $item->product->url_key) }}">
-                                        <img class="cart-img" src="{{ $productBaseImage['medium_image_url'] }}" />
+                                        <h1 class="large">{{ $item->product->name }}</h1>
                                     </a>
                                 </div>
-
-                                <div class="item-details">
-                                    <div class="item-title">
-                                        <a href="{{ route('shop.productOrCategory.index', $item->product->url_key) }}">
-                                          <h1 class="large">{{ $item->product->name }}</h1>
-                                        </a>
+                                @if (isset($item->additional['attributes']))
+                                    <div class="item-options">
+                                        @foreach ($item->additional['attributes'] as $attribute)
+                                            <b>{{ $attribute['attribute_name'] }} : </b>{{ $attribute['option_label'] }}</br>
+                                        @endforeach
                                     </div>
-                                    @if (isset($item->additional['attributes']))
-                                        <div class="item-options">
-                                            @foreach ($item->additional['attributes'] as $attribute)
-                                                <b>{{ $attribute['attribute_name'] }} : </b>{{ $attribute['option_label'] }}</br>
-                                            @endforeach
-                                        </div>
+                                @endif
+                                <div class="misc medium">
+                                    @if ($item->product->getTypeInstance()->showQuantityBox() === true)
+                                        <quantity-changer
+                                            :control-name="'qty[{{$item->id}}]'"
+                                            quantity="{{$item->quantity}}">
+                                        </quantity-changer>
                                     @endif
-
-                                    <div class="misc medium">
-                                        @if ($item->product->getTypeInstance()->showQuantityBox() === true)
-                                            <quantity-changer
-                                                :control-name="'qty[{{$item->id}}]'"
-                                                quantity="{{$item->quantity}}">
-                                            </quantity-changer>
-                                        @endif
-
-                                        <span class="remove">
-                                            <a href="{{ route('shop.checkout.cart.remove', $item->id) }}" onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">{{ __('shop::app.checkout.cart.remove-link') }}</a>
+                                    <span class="remove">
+                                        <a href="{{ route('shop.checkout.cart.remove', $item->id) }}" onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">{{ __('shop::app.checkout.cart.remove-link') }}</a>
+                                    </span>
+                                    {{--
+                                    @auth('customer')
+                                        <span class="towishlist">
+                                            @if ($item->parent_id != 'null' ||$item->parent_id != null)
+                                                <a href="{{ route('shop.movetowishlist', $item->id) }}" onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">{{ __('shop::app.checkout.cart.move-to-wishlist') }}</a>
+                                            @else
+                                                <a href="{{ route('shop.movetowishlist', $item->child->id) }}" onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">{{ __('shop::app.checkout.cart.move-to-wishlist') }}</a>
+                                            @endif
                                         </span>
-                                        {{--
-                                        @auth('customer')
-                                            <span class="towishlist">
-                                                @if ($item->parent_id != 'null' ||$item->parent_id != null)
-                                                    <a href="{{ route('shop.movetowishlist', $item->id) }}" onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">{{ __('shop::app.checkout.cart.move-to-wishlist') }}</a>
-                                                @else
-                                                    <a href="{{ route('shop.movetowishlist', $item->child->id) }}" onclick="removeLink('{{ __('shop::app.checkout.cart.cart-remove-action') }}')">{{ __('shop::app.checkout.cart.move-to-wishlist') }}</a>
-                                                @endif
-                                            </span>
-                                        @endauth --}}
-                                        <div class="price">
-                                            {{ core()->currency($item->base_price) }}
-                                        </div>
-
-                                    </div>
-                                    @if (! cart()->isItemHaveQuantity($item))
-                                        <div class="error-message">
-                                            * {{ __('shop::app.checkout.cart.quantity-error') }}
-                                        </div>
-                                    @endif
+                                    @endauth --}}
+                                    <div class="price">
+                                        {{ core()->currency($item->base_price) }}
                                     </div>
                                 </div>
-                            @endforeach
+                                @if (! cart()->isItemHaveQuantity($item))
+                                    <div class="error-message">
+                                        * {{ __('shop::app.checkout.cart.quantity-error') }}
+                                    </div>
+                                @endif
+                            </div>
                         </div>
+                    @endforeach
+                    </div>
 
                         <div class="misc-controls">
                             <a href="{{ route('shop.home.index') }}" class="left">
@@ -96,40 +92,40 @@
 
                 <div class="right-side">
                     @include('shop::checkout.total.summary', ['cart' => $cart])
-
                     <coupon-component>
-
                     </coupon-component>
                     @if (! cart()->hasError())
-
                     <div class="btn-grid border-b border-r btn-grid-primary">
                         @if ($cart->hasProductsWithQuantityBox())
                         <a href="{{ route('shop.checkout.onepage.index') }}" class="btn-hover">
                             <span>{{ __('shop::app.checkout.cart.proceed-to-checkout') }}</span>
                         </a>
-                        @endif
+                    @endif
                     </div>
 
-                @endif
+                    @endif
                 </div>
             </div>
 
             @include ('shop::products.view.cross-sells')
 
-        @else
-
-            <div class="title">
-                {{ __('shop::app.checkout.cart.title') }}
-            </div>
-
-            <div class="cart-content">
-                <p>
-                    {{ __('shop::app.checkout.cart.empty') }}
-                </p>
-
-                <p style="display: inline-block;">
-                    <a style="display: inline-block;" href="{{ route('shop.home.index') }}" class="btn btn-lg btn-primary">{{ __('shop::app.checkout.cart.continue-shopping') }}</a>
-                </p>
+            @else
+            <div class="left-side">
+                <div class="item-title">
+                    <h1 class="xlarge">
+                        {{ __('shop::app.checkout.cart.title') }}
+                    </h1>
+                </div>
+                <div style="text-align: center">
+                    <p class="medium">
+                        {{ __('shop::app.checkout.cart.empty') }}
+                    </p>
+                    <div class="btn-grid mt-s border btn-grid-primary">
+                        <a href="{{ route('shop.home.index') }}" class="btn-hover">
+                            {{ __('shop::app.checkout.cart.continue-shopping') }}
+                        </a>
+                    </div>
+                </div>
             </div>
 
         @endif

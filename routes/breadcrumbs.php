@@ -99,7 +99,7 @@ Breadcrumbs::for('checkout', function ($trail) {
 
 Breadcrumbs::for('orderSuccess', function ($trail) {
     $trail->parent('checkout');
-    $trail->push('Order successfully', route('shop.checkout.success'));
+    $trail->push('Success', route('shop.checkout.success'));
 });
 
 

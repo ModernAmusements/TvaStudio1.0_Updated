@@ -1,4 +1,3 @@
-
 .account-items-list {
     display: block;
     width: 100%;
@@ -46,7 +45,7 @@
         thead {
             display: table-header-group;
             .grid_head {
-                padding: 13px
+                padding: 13px;
             }
         }
     }
@@ -56,19 +55,19 @@
     .control-group {
         border-top: var(--border);
         position: relative;
-            label {
-                font-size: 14px;
-                border: var;
-                border-bottom: var(--border);
-                width: 100%;
-                display: flex;
-                padding-left: 5px;
-            }
-            input {
-                height: 49px;
-            }
+        label {
+            font-size: 14px;
+            border: var;
+            border-bottom: var(--border);
+            width: 100%;
+            display: flex;
+            padding-left: 5px;
+        }
+        input {
+            height: 49px;
+        }
     }
-    .grid-dropdown-header{
+    .grid-dropdown-header {
         display: flex;
         justify-content: space-between;
         height: 49px;
@@ -90,12 +89,12 @@
         background-color: var(--background-color);
         background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOS4wOSAxTDQuNTQ1IDQuNTkgMCAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iLjgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz48L3N2Zz4=");
         background-repeat: no-repeat;
-        background-position: calc(100% - .625rem) 50%;
+        background-position: calc(100% - 0.625rem) 50%;
         background-size: 11px 5px;
         border: 1px solid var(--background-color);
         box-shadow: none;
         border-radius: 0;
-        border-left: var(--border);
+
         border-right: none;
     }
     .apply-filter {
@@ -109,21 +108,40 @@
         display: grid;
         font-size: 14px;
         border-right: none;
+        border-left: none;
         border-bottom: none;
     }
 }
 
-
+.pagination {
+    .page-item {
+        border: var(--border);
+        padding: 7px 14px;
+        margin-left: 5px;
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    .previous,
+    .next {
+        display: none;
+    }
+    .page-item.active {
+        background: var(--tva-dark-green);
+        color: var(--background-color);
+        border-color: var(--tva-dark-green);
+    }
+}
 
 @media only screen and (max-width: 770px) {
-
     .grid-container {
         table {
             thead {
                 display: none;
             }
         }
-}
+    }
     .table {
         table {
             width: 100%;
@@ -143,12 +161,10 @@
                     left: 100px;
                     top: -20px;
                 }
-
             }
             tbody tr:last-child {
-                 border-bottom: var(--border);
+                border-bottom: var(--border);
             }
         }
     }
-
 }

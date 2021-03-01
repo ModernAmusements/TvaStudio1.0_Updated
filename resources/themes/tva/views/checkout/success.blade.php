@@ -13,9 +13,9 @@
     <div class="order-success-content">
         <h1>{{ __('shop::app.checkout.success.thanks') }}</h1>
 
-        <p class="paragraph">{{ __('shop::app.checkout.success.order-id-info', ['order_id' => $order->increment_id]) }}</p>
+        <p class="large">{{ __('shop::app.checkout.success.order-id-info', ['order_id' => $order->increment_id]) }}</p>
 
-        <p>{{ __('shop::app.checkout.success.info') }}</p>
+        <p class="large mt-s">{{ __('shop::app.checkout.success.info') }}</p>
 
         {{ view_render_event('bagisto.shop.checkout.continue-shopping.before', ['order' => $order]) }}
 

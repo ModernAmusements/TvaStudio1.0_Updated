@@ -229,32 +229,6 @@ header {
     }
 }
 
-.bread-crumbs {
-    display: flex;
-    padding: 1em;
-    margin-top: 45px;
-    border-bottom: var(--border);
-    justify-content: center;
-    .breadcrumb {
-        display: flex;
-        flex-direction: row;
-        font-size: 1.2rem;
-        font-weight: 500;
-        line-height: var(--lineHeight);
-        li {
-            display: block;
-            opacity: 0.5;
-        }
-        li.active {
-            opacity: 1;
-        }
-    }
-    .breadcrumb li + li:before {
-        padding: 8px;
-        content: "/\00a0";
-    }
-}
-
 .cart-icon {
     position: relative;
     top: 3px;

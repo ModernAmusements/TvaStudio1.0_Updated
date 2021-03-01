@@ -2,9 +2,8 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: calc(100vh - 100px);
+    height: 100vh;
     margin-top: 22px;
-    margin-bottom: 100px;
     padding: 0 2em;
     .account-layout {
         width: 80%;
@@ -37,9 +36,7 @@
         .menubar {
             position: relative;
             li {
-                /* width: 95%; */
                 height: 50px;
-                /* margin-left: 5%; */
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -49,6 +46,7 @@
                     width: 100%;
                     text-align: left;
                     padding: 14px;
+                    opacity: 0.5;
                 }
                 .icon {
                     display: none;
@@ -63,7 +61,7 @@
                 border-bottom: none;
             }
             li.active a {
-                color: var(--tva-primary-hover);
+                opacity: 1;
             }
             li.active .icon {
                 display: inline-block;
@@ -152,6 +150,3 @@
 .account-content .control-group .control {
     width: 100%;
 }
-
-
-
