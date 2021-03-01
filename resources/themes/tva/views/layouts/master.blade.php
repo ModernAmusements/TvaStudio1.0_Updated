@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="content-language" content="{{ app()->getLocale() }}">
-    {{-- STYLE --}}
-    <link rel="stylesheet preconnect" href="https://use.typekit.net/yxr4ufi.css">
 
-    <link rel="stylesheet" href="{{ bagisto_asset('css/shop.css') }}">
+
+    {{-- <link rel="stylesheet" href="{{ bagisto_asset('css/shop.css') }}"> --}}
     <link rel="stylesheet" href="{{ bagisto_asset('css/index.css') }}">
 
+    {{-- STYLE --}}
+    <link rel="stylesheet preconnect" href="https://use.typekit.net/yxr4ufi.css">
 
     @if ($favicon = core()->getCurrentChannel()->favicon_url)
         <link rel="icon" sizes="16x16" href="{{ $favicon }}" />
@@ -27,6 +28,7 @@
             <meta name="description" content="{{ core()->getCurrentChannel()->description }}" />
         @endif
     @show
+
     @stack('css')
 
 </head>

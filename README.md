@@ -88,13 +88,22 @@ masterSignUp
 - no succes add to cart 
 + indexSignUp = breadcrumps 
 - index = Nav Menu 
+- shop.css
 
 masterBreadCrumps
 + succes add to cart 
 + indexSignUp = breadcrumps 
 - index = Nav Menu 
+- shop.css
 
 master
 + succes add to cart 
 + index = Nav Menu 
 - indexSignUp = breadcrumps 
+- shop.css
+
+
+
+
+// admin css to resourcess assetes admin scsss
+// us css same 
