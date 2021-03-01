@@ -41,7 +41,7 @@
 
     .control {
         font-size: 15px;
-        border: 2px solid $control-border-color;
+        border: 1px solid $control-border-color;
         border-right: none;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
@@ -57,7 +57,7 @@
     }
 
     .icon-wrapper {
-        border: 2px solid $control-border-color;
+        border: 1px solid $control-border-color;
         border-radius: 3px;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
@@ -78,7 +78,7 @@
     align-items: center;
     height: 36px;
     width: 200px;
-    border: 2px solid $control-border-color;
+    border: 1px solid $control-border-color;
     border-radius: 3px;
     color: #8E8E8E;
     padding: 0px 5px 0px 5px;

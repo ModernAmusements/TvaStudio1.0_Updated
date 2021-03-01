@@ -28,7 +28,6 @@ body {
     height: 60px;
     background-color: $navbar-top-background;
     font-size: 0;
-    @include box-shadow(0 3px 6px 0 rgba(0, 0, 0, 0.05));
     border-bottom: 1px solid $border-color;
     position: fixed;
     left: 0;
@@ -38,6 +37,7 @@ body {
     .navbar-top-left {
         width: 50%;
         height: 60px;
+        border-bottom: 1px solid $border-color;
         display: inline-block;
         vertical-align: middle;
         background-color: $white;
@@ -262,7 +262,7 @@ body {
 
     .control {
         background: $white;
-        border: 2px solid #c7c7c7;
+        border: 1px solid #c7c7c7;
         @include border-radius(3px);
         width: 150px;
         height: 36px;
