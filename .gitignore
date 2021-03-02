@@ -24,4 +24,7 @@ yarn.lock
 storage/*.key
 /docker-compose-collection/
 /resources/themes/velocity/*
-!/vendor/bagisto
+
+!/vendor/
+/vendor/**
+!/vendor/bagisto/
