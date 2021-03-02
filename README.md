@@ -114,3 +114,22 @@ Webkul\Velocity\Providers\VelocityServiceProvider::class
 
 removed from config/concord.php 
 \Webkul\Velocity\Providers\ModuleServiceProvider::class,
+
+
+
+
+
+php --ini where is file 
+
+
+Here =
+
+Configuration File (php.ini) Path: /usr/local/etc/php/7.4
+Loaded Configuration File:         /usr/local/etc/php/7.4/php.ini
+Scan for additional .ini files in: /usr/local/etc/php/7.4/conf.d
+Additional .ini files parsed:      /usr/local/etc/php/7.4/conf.d/ext-opcache.ini,
+/usr/local/etc/php/7.4/conf.d/php-memory-limits.ini
+
+memorylimit: unlimeted
+
+composer update 

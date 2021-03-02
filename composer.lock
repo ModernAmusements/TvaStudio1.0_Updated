@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "baa4906f69e55ab7e1e1ee95aeaa143a",
+    "content-hash": "4e377eac708a946e4e37a572a531154e",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -219,16 +219,6 @@
                 "framework",
                 "laravel"
             ],
-            "support": {
-                "issues": "https://github.com/bagisto/bagisto/issues",
-                "source": "https://github.com/bagisto/bagisto/tree/master"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/bagisto",
-                    "type": "open_collective"
-                }
-            ],
             "time": "2020-04-28T15:55:25+00:00"
         },
         {
@@ -366,10 +356,6 @@
                 "laravel",
                 "pdf"
             ],
-            "support": {
-                "issues": "https://github.com/barryvdh/laravel-dompdf/issues",
-                "source": "https://github.com/barryvdh/laravel-dompdf/tree/master"
-            },
             "time": "2019-08-23T14:30:33+00:00"
         },
         {
@@ -437,10 +423,6 @@
             "keywords": [
                 "laravel"
             ],
-            "support": {
-                "issues": "https://github.com/diglactic/laravel-breadcrumbs/issues",
-                "source": "https://github.com/diglactic/laravel-breadcrumbs/tree/v6.1.0"
-            },
             "time": "2021-01-25T18:38:42+00:00"
         },
         {
@@ -474,10 +456,6 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "support": {
-                "issues": "https://github.com/dnoegel/php-xdg-base-dir/issues",
-                "source": "https://github.com/dnoegel/php-xdg-base-dir/tree/v0.1.1"
-            },
             "time": "2019-12-04T15:06:13+00:00"
         },
         {
@@ -660,10 +638,6 @@
                 "php",
                 "queryobject"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/2.9"
-            },
             "time": "2018-12-31T03:27:51+00:00"
         },
         {
@@ -835,24 +809,6 @@
                 "uppercase",
                 "words"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/2.0.x"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finflector",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-05-29T15:13:26+00:00"
         },
         {
@@ -914,24 +870,6 @@
                 "lexer",
                 "parser",
                 "php"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.2.1"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-05-25T17:44:05+00:00"
         },
@@ -1240,10 +1178,6 @@
                 "flare",
                 "ignition"
             ],
-            "support": {
-                "issues": "https://github.com/facade/ignition-contracts/issues",
-                "source": "https://github.com/facade/ignition-contracts/tree/1.0.2"
-            },
             "time": "2020-10-16T08:27:54+00:00"
         },
         {
@@ -1360,10 +1294,6 @@
                 "laravel",
                 "model"
             ],
-            "support": {
-                "issues": "https://github.com/Flynsarmy/laravel-db-blade-compiler/issues",
-                "source": "https://github.com/Flynsarmy/laravel-db-blade-compiler/tree/5.5.0"
-            },
             "time": "2019-07-28T22:19:29+00:00"
         },
         {
@@ -1486,10 +1416,6 @@
                 "rest",
                 "web service"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5"
-            },
             "time": "2020-06-16T21:01:06+00:00"
         },
         {
@@ -1690,10 +1616,6 @@
                 "thumbnail",
                 "watermark"
             ],
-            "support": {
-                "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/master"
-            },
             "time": "2019-11-02T09:15:47+00:00"
         },
         {
@@ -1803,10 +1725,6 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
-            "support": {
-                "issues": "https://github.com/JakubOnderka/PHP-Console-Color/issues",
-                "source": "https://github.com/JakubOnderka/PHP-Console-Color/tree/master"
-            },
             "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
@@ -1854,10 +1772,6 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
-            "support": {
-                "issues": "https://github.com/JakubOnderka/PHP-Console-Highlighter/issues",
-                "source": "https://github.com/JakubOnderka/PHP-Console-Highlighter/tree/master"
-            },
             "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
@@ -1918,10 +1832,6 @@
                 "nested sets",
                 "nsm"
             ],
-            "support": {
-                "issues": "https://github.com/lazychaser/laravel-nestedset/issues",
-                "source": "https://github.com/lazychaser/laravel-nestedset/tree/v5.0.0"
-            },
             "time": "2019-09-06T06:18:32+00:00"
         },
         {
@@ -2372,10 +2282,6 @@
                 "laravel",
                 "psysh"
             ],
-            "support": {
-                "issues": "https://github.com/laravel/tinker/issues",
-                "source": "https://github.com/laravel/tinker/tree/v1.0.10"
-            },
             "time": "2019-08-07T15:10:45+00:00"
         },
         {
@@ -2764,10 +2670,6 @@
                 "php",
                 "phpspreadsheet"
             ],
-            "support": {
-                "issues": "https://github.com/Maatwebsite/Laravel-Excel/issues",
-                "source": "https://github.com/Maatwebsite/Laravel-Excel/tree/3.1.18"
-            },
             "time": "2019-12-24T10:40:12+00:00"
         },
         {
@@ -2828,16 +2730,6 @@
             "keywords": [
                 "stream",
                 "zip"
-            ],
-            "support": {
-                "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
-                "source": "https://github.com/maennchen/ZipStream-PHP/tree/master"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/zipstream",
-                    "type": "open_collective"
-                }
             ],
             "time": "2020-05-30T13:11:16+00:00"
         },
@@ -3296,10 +3188,6 @@
                 "jwt",
                 "token"
             ],
-            "support": {
-                "issues": "https://github.com/namshi/jose/issues",
-                "source": "https://github.com/namshi/jose/tree/master"
-            },
             "time": "2016-12-05T07:27:31+00:00"
         },
         {
@@ -3519,10 +3407,6 @@
                 "nwidart",
                 "rad"
             ],
-            "support": {
-                "issues": "https://github.com/nWidart/laravel-modules/issues",
-                "source": "https://github.com/nWidart/laravel-modules/tree/master"
-            },
             "time": "2018-07-13T15:36:59+00:00"
         },
         {
@@ -3633,11 +3517,6 @@
                 "pseudorandom",
                 "random"
             ],
-            "support": {
-                "email": "info@paragonie.com",
-                "issues": "https://github.com/paragonie/random_compat/issues",
-                "source": "https://github.com/paragonie/random_compat"
-            },
             "time": "2018-07-02T15:55:56+00:00"
         },
         {
@@ -3675,10 +3554,6 @@
             ],
             "description": "A library to read, parse, export and make subsets of different types of font files.",
             "homepage": "https://github.com/PhenX/php-font-lib",
-            "support": {
-                "issues": "https://github.com/PhenX/php-font-lib/issues",
-                "source": "https://github.com/PhenX/php-font-lib/tree/0.5.2"
-            },
             "time": "2020-03-08T15:31:32+00:00"
         },
         {
@@ -3719,10 +3594,6 @@
             ],
             "description": "A library to read, parse and export to PDF SVG files.",
             "homepage": "https://github.com/PhenX/php-svg-lib",
-            "support": {
-                "issues": "https://github.com/PhenX/php-svg-lib/issues",
-                "source": "https://github.com/PhenX/php-svg-lib/tree/master"
-            },
             "time": "2019-09-11T20:02:13+00:00"
         },
         {
@@ -4065,10 +3936,6 @@
                 "container-interop",
                 "psr"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/master"
-            },
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
@@ -4226,9 +4093,6 @@
                 "request",
                 "response"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/http-message/tree/master"
-            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -4276,9 +4140,6 @@
                 "psr",
                 "psr-3"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.3"
-            },
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
@@ -4327,9 +4188,6 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/master"
-            },
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
@@ -4404,10 +4262,6 @@
                 "interactive",
                 "shell"
             ],
-            "support": {
-                "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.9.12"
-            },
             "time": "2019-12-06T14:19:43+00:00"
         },
         {
@@ -4448,10 +4302,6 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "support": {
-                "issues": "https://github.com/ralouphie/getallheaders/issues",
-                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
-            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
@@ -4539,12 +4389,6 @@
                 "identifier",
                 "uuid"
             ],
-            "support": {
-                "issues": "https://github.com/ramsey/uuid/issues",
-                "rss": "https://github.com/ramsey/uuid/releases.atom",
-                "source": "https://github.com/ramsey/uuid",
-                "wiki": "https://github.com/ramsey/uuid/wiki"
-            },
             "time": "2020-02-21T04:36:14+00:00"
         },
         {
@@ -4590,10 +4434,6 @@
                 "parser",
                 "stylesheet"
             ],
-            "support": {
-                "issues": "https://github.com/sabberworm/PHP-CSS-Parser/issues",
-                "source": "https://github.com/sabberworm/PHP-CSS-Parser/tree/8.3.1"
-            },
             "time": "2020-06-01T09:10:00+00:00"
         },
         {
@@ -7216,16 +7056,16 @@
         },
         {
             "name": "codeception/lib-innerbrowser",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-innerbrowser.git",
-                "reference": "b7406c710684c255d9b067d7795269a5585a0406"
+                "reference": "693e116f81ef98eae98c43ef785a726faf87394e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/b7406c710684c255d9b067d7795269a5585a0406",
-                "reference": "b7406c710684c255d9b067d7795269a5585a0406",
+                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/693e116f81ef98eae98c43ef785a726faf87394e",
+                "reference": "693e116f81ef98eae98c43ef785a726faf87394e",
                 "shasum": ""
             },
             "require": {
@@ -7268,11 +7108,7 @@
             "keywords": [
                 "codeception"
             ],
-            "support": {
-                "issues": "https://github.com/Codeception/lib-innerbrowser/issues",
-                "source": "https://github.com/Codeception/lib-innerbrowser/tree/1.4.0"
-            },
-            "time": "2021-01-29T18:17:25+00:00"
+            "time": "2021-03-02T08:01:54+00:00"
         },
         {
             "name": "codeception/module-asserts",
@@ -7382,65 +7218,6 @@
                 "source": "https://github.com/Codeception/module-filesystem/tree/1.0.3"
             },
             "time": "2020-10-24T14:46:40+00:00"
-        },
-        {
-            "name": "codeception/module-laravel",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Codeception/module-laravel.git",
-                "reference": "f32a941a06e57bb06d2e485da11b191f38bec659"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-laravel/zipball/f32a941a06e57bb06d2e485da11b191f38bec659",
-                "reference": "f32a941a06e57bb06d2e485da11b191f38bec659",
-                "shasum": ""
-            },
-            "require": {
-                "codeception/codeception": "^4.0",
-                "codeception/lib-innerbrowser": "^1.3",
-                "ext-json": "*",
-                "php": "^7.3 | ^8.0"
-            },
-            "require-dev": {
-                "codeception/module-asserts": "^1.3",
-                "codeception/module-rest": "^1.2",
-                "vlucas/phpdotenv": "^3.6 | ^4.1 | ^5.2"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan-Henk Gerritsen"
-                },
-                {
-                    "name": "Michael Bodnarchuk"
-                },
-                {
-                    "name": "Gustavo Nieves",
-                    "homepage": "https://medium.com/@ganieves"
-                }
-            ],
-            "description": "Codeception module for Laravel framework",
-            "homepage": "https://codeception.com/",
-            "keywords": [
-                "codeception",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/Codeception/module-laravel/issues",
-                "source": "https://github.com/Codeception/module-laravel/tree/2.0.0"
-            },
-            "time": "2020-12-29T20:23:12+00:00"
         },
         {
             "name": "codeception/module-laravel5",
@@ -7762,79 +7539,6 @@
                 }
             ],
             "time": "2020-11-10T18:47:58+00:00"
-        },
-        {
-            "name": "laravel/dusk",
-            "version": "v6.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/dusk.git",
-                "reference": "59f9febbaf9559a8a744187f38c53bbd425edd93"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/dusk/zipball/59f9febbaf9559a8a744187f38c53bbd425edd93",
-                "reference": "59f9febbaf9559a8a744187f38c53bbd425edd93",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-zip": "*",
-                "illuminate/console": "^6.0|^7.0|^8.0",
-                "illuminate/support": "^6.0|^7.0|^8.0",
-                "nesbot/carbon": "^2.0",
-                "php": "^7.2|^8.0",
-                "php-webdriver/webdriver": "^1.9.0",
-                "symfony/console": "^4.3|^5.0",
-                "symfony/finder": "^4.3|^5.0",
-                "symfony/process": "^4.3|^5.0",
-                "vlucas/phpdotenv": "^3.0|^4.0|^5.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^4.16|^5.17.1|^6.12.1",
-                "phpunit/phpunit": "^7.5.15|^8.4|^9.0"
-            },
-            "suggest": {
-                "ext-pcntl": "Used to gracefully terminate Dusk when tests are running."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.x-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Dusk\\DuskServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Dusk\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel Dusk provides simple end-to-end testing and browser automation.",
-            "keywords": [
-                "laravel",
-                "testing",
-                "webdriver"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/dusk/issues",
-                "source": "https://github.com/laravel/dusk/tree/v6.13.0"
-            },
-            "time": "2021-02-23T20:28:11+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -10017,5 +9721,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }
