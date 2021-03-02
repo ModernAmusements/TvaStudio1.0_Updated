@@ -133,3 +133,6 @@ Additional .ini files parsed:      /usr/local/etc/php/7.4/conf.d/ext-opcache.ini
 memorylimit: unlimeted
 
 composer update 
+
+
+composer rollback
