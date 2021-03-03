@@ -136,3 +136,6 @@ composer update
 
 
 composer rollback
+
+
+php artisan bagisto:install

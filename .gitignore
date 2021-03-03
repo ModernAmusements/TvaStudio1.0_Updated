@@ -25,4 +25,5 @@ storage/*.key
 /docker-compose-collection/
 /resources/themes/velocity/*
 
-/vendor/bagisto
+!.gitignore
+!/vendor/bagisto
